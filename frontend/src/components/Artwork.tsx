@@ -34,8 +34,10 @@ export default function Artwork({ seed, label, className }: Props) {
     const h = hashSeed(seed)
     const patterns: Pattern[] = ['arcs', 'rings', 'grid', 'waves', 'blobs', 'glyph']
     const pattern = patterns[h % patterns.length]
-    const palette = PALETTES[(h >> 3) % PALETTES.length]
-    const rot = ((h >> 5) % 24) - 12
+    // NOTE: use unsigned shifts — signed (>>) goes negative for hashes with the
+    // high bit set, producing out-of-range array indexes.
+    const palette = PALETTES[(h >>> 3) % PALETTES.length] ?? PALETTES[0]
+    const rot = ((h >>> 5) % 24) - 12
     return { pattern, palette, rot }
   }, [seed])
 
