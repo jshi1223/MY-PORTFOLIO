@@ -3,25 +3,23 @@ import { Link } from 'react-router-dom'
 import Artwork from '../components/Artwork'
 import Avatar from '../components/Avatar'
 import Marquee from '../components/Marquee'
-import ProjectCard from '../components/ProjectCard'
 import Portrait from '../components/Portrait'
+import { RepoCard, useRepos } from '../components/RepoCard'
 import Reveal from '../components/Reveal'
 import { content } from '../data/content'
-import { projects } from '../data/projects'
 import { usePageTitle } from '../hooks/usePageTitle'
 
-const featured = projects.filter((p) => p.featured)
-
-function Showreel() {
+function Showreel({ repos }: { repos: ReturnType<typeof useRepos> }) {
+  const featured = repos.slice(0, 4)
   const [i, setI] = useState(0)
   const paused = useRef(false)
 
   useEffect(() => {
     const t = setInterval(() => {
-      if (!paused.current) setI((v) => (v + 1) % featured.length)
+      if (!paused.current) setI((v) => (v + 1) % Math.max(featured.length, 1))
     }, 4500)
     return () => clearInterval(t)
-  }, [])
+  }, [featured.length])
 
   return (
     <div
@@ -30,26 +28,29 @@ function Showreel() {
       onMouseLeave={() => (paused.current = false)}
     >
       <div className="relative aspect-[4/5] sm:aspect-[16/9]">
-        {featured.map((p, idx) => (
-          <Link
-            key={p.slug}
-            to={`/work/${p.slug}`}
+        {featured.map((repo, idx) => (
+          <a
+            key={repo.name}
+            href={repo.html_url}
+            target="_blank"
+            rel="noreferrer"
             className={`absolute inset-0 transition-opacity duration-700 ${
               idx === i ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
             aria-hidden={idx !== i}
           >
-            <Artwork seed={`${p.slug}-showreel`} label={p.title} className="h-full w-full" />
+            <Artwork seed={`repo-${repo.name}`} label={repo.language ?? 'code'} className="h-full w-full" />
             <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/80 via-transparent to-transparent p-6 text-paper sm:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-paper/80">
-                {p.category} · {p.year}
+                {repo.language ?? 'Code'} · {new Date(repo.created_at).getFullYear()}
+                {repo.fork ? ' · Fork' : ''}
               </p>
               <h3 className="mt-2 max-w-xl font-display text-2xl font-semibold tracking-tight sm:text-4xl">
-                {p.title}
+                {repo.name}
               </h3>
-              <p className="text-sm text-paper/75">{p.client}</p>
+              <p className="line-clamp-1 text-sm text-paper/75">{repo.description ?? repo.html_url}</p>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 
@@ -67,7 +68,7 @@ function Showreel() {
         ))}
       </div>
       <span className="absolute left-4 top-4 rounded-full bg-ink/70 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-paper backdrop-blur">
-        Showreel — selected work
+        Showreel — live from GitHub
       </span>
     </div>
   )
@@ -76,6 +77,7 @@ function Showreel() {
 export default function Home() {
   usePageTitle()
   const p = content.profile
+  const repos = useRepos()
 
   return (
     <>
@@ -129,7 +131,7 @@ export default function Home() {
           </div>
 
           <Reveal delay={250}>
-            <Showreel />
+            <Showreel repos={repos} />
           </Reveal>
         </div>
       </section>
@@ -192,7 +194,7 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-6">
               <div>
-                <p className="eyebrow">Selected work</p>
+                <p className="eyebrow">Selected work — live from GitHub</p>
                 <h2 className="mt-3 font-display text-huge font-semibold leading-none tracking-tightest">
                   Proof, not promises.
                 </h2>
@@ -203,9 +205,9 @@ export default function Home() {
             </div>
           </Reveal>
           <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2">
-            {projects.slice(0, 4).map((project, i) => (
-              <Reveal key={project.slug} delay={(i % 2) * 120}>
-                <ProjectCard project={project} index={i} />
+            {repos.slice(0, 6).map((repo, i) => (
+              <Reveal key={repo.name} delay={(i % 2) * 120}>
+                <RepoCard repo={repo} index={i} />
               </Reveal>
             ))}
           </div>
