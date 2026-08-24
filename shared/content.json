@@ -1,0 +1,1142 @@
+{
+  "profile": {
+    "brand": "SHI STUDIO",
+    "name": "Vanessa Shi",
+    "role": "Independent Brand & Web Designer",
+    "headline": "I design brands that people remember.",
+    "intro": "Hi! I'm Vanessa — a freelance creative from San Bartolome, Sto. Tomas, Batangas. For the past 6 years I've helped cafés, startups, and cultural institutions turn 'pwede na' into unforgettable: strategy-led identities, websites that convert, and print you actually want to keep.",
+    "email": "vaness098a@gmail.com",
+    "phone": "+63 936 503 6583",
+    "phoneRaw": "+639365036583",
+    "location": "San Bartolome, Sto. Tomas, Batangas, PH",
+    "availability": "Booking projects for October 2026",
+    "github": "https://github.com/jshi1223",
+    "instagram": "https://instagram.com/",
+    "behance": "https://behance.net/",
+    "calendly": "https://calendly.com/jshi1223/discovery-call"
+  },
+  "clients": [
+    "Kape Diwata",
+    "Isla Skincare",
+    "Bayanihan Bank",
+    "Tala Paper Co.",
+    "Sining Festival",
+    "Luntian Farms",
+    "Habihan Weavers",
+    "Merienda Co.",
+    "Halo Hotel",
+    "Puso Health"
+  ],
+  "press": [
+    {
+      "source": "Behance",
+      "title": "Featured in the Graphic Design Gallery",
+      "year": "2024"
+    },
+    {
+      "source": "Dribbble",
+      "title": "Editors' Pick — Kape Diwata Rebrand",
+      "year": "2025"
+    },
+    {
+      "source": "Adobo Design Weekly",
+      "title": "Interview: Provincial Studio, Global Work",
+      "year": "2025"
+    },
+    {
+      "source": "DesignRush",
+      "title": "Top Branding Agencies in Batangas",
+      "year": "2026"
+    }
+  ],
+  "processSteps": [
+    {
+      "step": "01",
+      "title": "Listen",
+      "body": "Every project starts with a proper kwentuhan — a discovery call and a questionnaire that digs into your business, audience, and ambitions."
+    },
+    {
+      "step": "02",
+      "title": "Define",
+      "body": "I distill research into a clear creative direction: positioning, moodboards, and a written strategy we agree on before anything gets drawn."
+    },
+    {
+      "step": "03",
+      "title": "Make",
+      "body": "Sketches first, always. Concepts are explored wide, then narrowed into one or two directions worth developing properly."
+    },
+    {
+      "step": "04",
+      "title": "Refine",
+      "body": "We pressure-test the chosen direction across real touchpoints — packaging, screens, signage — and polish until it sings."
+    },
+    {
+      "step": "05",
+      "title": "Launch",
+      "body": "You get organized files, brand guidelines, and 30 days of post-launch support. I don't disappear after invoicing."
+    }
+  ],
+  "services": [
+    {
+      "slug": "brand-identity",
+      "name": "Brand Identity",
+      "tagline": "Logos are easy. Identities are engineered.",
+      "includes": [
+        "Brand discovery workshop & questionnaire",
+        "Positioning + verbal identity basics (name checks, taglines)",
+        "Primary & secondary logo suite with variations",
+        "Color system, typography pairing, art direction",
+        "Brand guidelines PDF (20–30 pages)",
+        "Launch-ready file library (print, web, social)"
+      ],
+      "price": "From $1,200",
+      "timeline": "3–5 weeks"
+    },
+    {
+      "slug": "website-design",
+      "name": "Website Design",
+      "tagline": "Sites that look expensive and sell quietly.",
+      "includes": [
+        "Sitemap, wireframes & content guidance",
+        "Custom desktop + mobile design in Figma",
+        "Design system & reusable components",
+        "Webflow / React development handoff (or build add-on)",
+        "Basic SEO setup & analytics wiring",
+        "1 training session so you can edit confidently"
+      ],
+      "price": "From $2,000",
+      "timeline": "4–6 weeks"
+    },
+    {
+      "slug": "social-media-design",
+      "name": "Social Media Design",
+      "tagline": "Feeds that stop thumbs, not just fill grids.",
+      "includes": [
+        "Monthly content design retainer or one-off kits",
+        "Editable Canva/Figma templates for your team",
+        "Campaign key visuals & story animations",
+        "Profile & highlight revamp",
+        "Simple posting calendar template"
+      ],
+      "price": "From $500/mo",
+      "timeline": "Ongoing monthly"
+    },
+    {
+      "slug": "print-collateral",
+      "name": "Print Collateral",
+      "tagline": "Ink on paper, done with respect for paper.",
+      "includes": [
+        "Business cards, letterheads, menus, brochures",
+        "Posters, flyers & event materials",
+        "Print-ready files with correct bleed/color profiles",
+        "Press coordination with your local printer",
+        "Paper stock & finishing recommendations"
+      ],
+      "price": "From $400",
+      "timeline": "1–3 weeks"
+    },
+    {
+      "slug": "packaging-design",
+      "name": "Packaging Design",
+      "tagline": "The last three seconds of marketing, nailed.",
+      "includes": [
+        "Structural dieline coordination",
+        "Label & box design for SKU families",
+        "Regulatory text layout support",
+        "3D mockups for investor/launch decks",
+        "Printer-ready artwork & color proofs"
+      ],
+      "price": "From $900",
+      "timeline": "3–6 weeks"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much does a typical project cost?",
+      "a": "Most brand identity projects land between $1,200–$2,800; websites between $2,000–$5,000 depending on scope. Every proposal is fixed-price — no surprise hourly bills."
+    },
+    {
+      "q": "How long does a project take?",
+      "a": "Branding runs 3–5 weeks, websites 4–6 weeks, print 1–3 weeks. I'll give you a week-by-week timeline before we start, and I flag risks early."
+    },
+    {
+      "q": "What do you need from me to start?",
+      "a": "A signed proposal, 50% deposit, and honest answers to my questionnaire. The more you tell me about your business (even the messy parts), the better the work."
+    },
+    {
+      "q": "How many revisions are included?",
+      "a": "Two structured rounds per deliverable. In practice, when strategy is agreed early, most clients use barely one. Extra rounds are billed transparently at $40/hr."
+    },
+    {
+      "q": "Do you work remotely? What's your timezone?",
+      "a": "Yes — I'm based in Batangas, Philippines (GMT+8) and have worked with clients from Manila to Melbourne to Montreal. Async-first, with calls scheduled kindly for both sides."
+    },
+    {
+      "q": "Can you also print or develop the website?",
+      "a": "I partner with trusted local printers and developers, or I can build it myself as an add-on. You'll get recommendations that fit budget, not commissions."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Vanessa didn't just redesign our logo — she gave our little coffee shop a story customers repeat back to us. Sales of our retail bags doubled in three months.",
+      "name": "Mara Villanueva",
+      "role": "Founder",
+      "company": "Kape Diwata Coffee Roasters",
+      "initials": "MV",
+      "projectSlug": "kape-diwata"
+    },
+    {
+      "id": 2,
+      "quote": "Our old site looked like a spreadsheet. The new one feels like the product itself — calm, clean, premium. Checkout conversion went from 0.9% to 2.4%.",
+      "name": "Josh Tan",
+      "role": "CEO",
+      "company": "Isla Skincare",
+      "initials": "JT",
+      "projectSlug": "isla-skincare"
+    },
+    {
+      "id": 3,
+      "quote": "The motion system Vanessa built means every product video now ships in hours, not weeks. It paid for itself before launch.",
+      "name": "Priya Santos",
+      "role": "Head of Product",
+      "company": "Bayanihan Bank",
+      "initials": "PS",
+      "projectSlug": "bayanihan-bank"
+    },
+    {
+      "id": 4,
+      "quote": "She thinks like a strategist and crafts like an artist. Our guests literally photograph the key cards. That's free marketing.",
+      "name": "Ana Lim",
+      "role": "Marketing Director",
+      "company": "Halo Hotel",
+      "initials": "AL",
+      "projectSlug": "halo-hotel"
+    },
+    {
+      "id": 5,
+      "quote": "Fast, communicative, and allergic to mediocre work. Our merienda boxes finally look as good as the food tastes.",
+      "name": "Miguel Reyes",
+      "role": "Owner",
+      "company": "Merienda Co.",
+      "initials": "MR",
+      "projectSlug": "merienda-co"
+    },
+    {
+      "id": 6,
+      "quote": "A festival identity flexible enough for 60 artists yet instantly recognizable citywide. Attendance hit record highs — the posters kept disappearing from walls!",
+      "name": "Kat Bautista",
+      "role": "Festival Director",
+      "company": "Sining Festival",
+      "initials": "KB",
+      "projectSlug": "sining-festival"
+    }
+  ],
+  "posts": [
+    {
+      "slug": "kape-diwata-sketchbook-to-shelf",
+      "title": "From sketchbook to shelf: rebranding Kape Diwata",
+      "category": "Behind the Scenes",
+      "date": "2025-11-18",
+      "readTime": "6 min read",
+      "excerpt": "43 sketches, two near-disasters, and one kapeng barako-fueled final week — how a Batangas roaster got its myth back.",
+      "blocks": [
+        {
+          "h": "It started with a bad label",
+          "p": [
+            "The first thing Mara handed me wasn't a brief — it was her competitor's bag. \"This is what we're up against,\" she said, sliding a glossy, gold-foamed pack across the table. It was beautiful and completely forgettable. That meeting became my benchmark: if a design is only beautiful, it loses."
+          ]
+        },
+        {
+          "h": "Sketching the myth",
+          "p": [
+            "Kape Diwata's name comes from the diwata — forest guardians of Filipino myth. My sketchbook pages filled with eyes, leaves, and crescents. Page 17 had the winner almost by accident: a closed-eye face formed by negative space inside a coffee cherry.",
+            "I nearly missed it. It was a tiny thumbnail among forty others. But thumbnails don't lie — the ones you keep redrawing are the ones worth developing."
+          ]
+        },
+        {
+          "h": "Two near-disasters",
+          "p": [
+            "First: the printer's proof came back with the accent green shifted to something closer to pond water. We switched stock and re-profiled the artwork. Second: a trademark search revealed a small tea brand using a similar mark in Cebu. Two weeks of legal letters later, we adjusted the eye shape just enough to be distinct — and honestly, better."
+          ]
+        },
+        {
+          "h": "What shipped",
+          "p": [
+            "The final system pairs the mark with hand-set type and a kraft-and-vermilion palette that survives both café chalkboards and supermarket shelves. Retail bag sales doubled within a quarter.",
+            "The lesson I keep relearning: the answer is usually already in the client's story. My job is mostly to stop it from being sanded down into generic."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "refresh-not-redesign",
+      "title": "5 signs your brand needs a refresh (not a redesign)",
+      "category": "Design Tips",
+      "date": "2025-09-02",
+      "readTime": "4 min read",
+      "excerpt": "Before you torch your identity and start over, read this. Most brands don't need new — they need coherent.",
+      "blocks": [
+        {
+          "h": null,
+          "p": [
+            "\"Rebrand\" has become the default word for any visual discomfort. But throwing away recognition is expensive. Here's how I diagnose whether a client needs surgery or just a haircut."
+          ]
+        },
+        {
+          "h": "1. Your assets disagree with each other",
+          "p": [
+            "If your Instagram, menu board, and invoices look like three different companies, you don't need a new identity — you need rules applied consistently. A refresh plus guidelines fixes 80% of these cases."
+          ]
+        },
+        {
+          "h": "2. Recognition tests fail, but sentiment doesn't",
+          "p": [
+            "When customers recognize you but describe you in flat words (\"it's fine,\" \"it's okay\"), evolve the expression. When they can't pick you out of a lineup at all, then we talk bigger changes."
+          ]
+        },
+        {
+          "h": "3. Your market moved and you didn't",
+          "p": [
+            "Categories drift premium, or playful, or minimal. A refresh recalibrates tone without discarding equity — new type, updated palette, sharper photography."
+          ]
+        },
+        {
+          "h": "4. The core mark still works",
+          "p": [
+            "If your symbol still carries meaning, refine its geometry rather than replacing it. The best refreshes feel inevitable in hindsight, not trendy."
+          ]
+        },
+        {
+          "h": "5. You're bored, not your customers",
+          "p": [
+            "Founder boredom is real, but it's a terrible brief. If customers are engaging and sales hold steady, redirect that energy into campaigns, not a rebuild. Save the big move for when the data asks for it."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "paper-first-web-design",
+      "title": "Why I still start every web project on paper",
+      "category": "Process",
+      "date": "2026-02-10",
+      "readTime": "5 min read",
+      "excerpt": "Figma is where interfaces get dressed up. Paper is where their skeletons get honest.",
+      "blocks": [
+        {
+          "h": "The tyranny of the pixel",
+          "p": [
+            "Open a blank Figma frame and you're immediately choosing font sizes before you've decided what the page must accomplish. Paper removes that temptation — there's no color picker on a Post-it."
+          ]
+        },
+        {
+          "h": "My 30-minute paper ritual",
+          "p": [
+            "For every page, I write the single job of that page at the top (“convince parents this clinic is safe”), then block sections as rectangles with verbs: reassure, prove, invite. No decoration exists until every rectangle earns its place.",
+            "Wireframes drawn this way take minutes, invite honest feedback from clients (nobody critiques a napkin), and make the eventual high-fidelity design faster because decisions are already made."
+          ]
+        },
+        {
+          "h": "What this catches early",
+          "p": [
+            "Missing proof. Redundant sections. CTAs competing instead of sequencing. Nine times out of ten, the problem with a struggling website isn't styling — it's an argument that was never structured."
+          ]
+        },
+        {
+          "h": "Try it on your next page",
+          "p": [
+            "Grab paper, write the page's one job, draw five boxes max, give each a verb and a sentence. If a box can't state its verb, delete it. Your users will feel the difference even if they never see the sketches."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "designing-in-public-solo-studio",
+      "title": "Designing in public: lessons from a solo studio in Batangas",
+      "category": "Industry Thoughts",
+      "date": "2026-06-21",
+      "readTime": "7 min read",
+      "excerpt": "One laptop, two monitors, occasional rooster ambience — what six years of independent practice taught me about running a global studio from a province.",
+      "blocks": [
+        {
+          "h": "Provincial doesn't mean provincial",
+          "p": [
+            "When I started, I assumed serious clients required a Makita address. Six years and four countries of clients later, the evidence says otherwise: taste travels through portfolios, not ZIP codes. What geography does change is your default rhythm — mine includes rice-field walks between calls, which I consider a competitive advantage."
+          ]
+        },
+        {
+          "h": "Systems beat inspiration",
+          "p": [
+            "Solo means no one absorbs your chaos for you. So I built boring systems: a proposal template, a kickoff questionnaire, file naming I follow religiously, Friday admin blocks. Unromantic? Completely. The reason clients say \"you're so easy to work with\"? Also completely those systems."
+          ]
+        },
+        {
+          "h": "Publish the kitchen",
+          "p": [
+            "Sharing process — rejected sketches, honest metrics, lessons from failures — has brought me more aligned clients than any portfolio polish. People don't hire the grid anymore; they hire the judgment behind it."
+          ]
+        },
+        {
+          "h": "The quiet math of independence",
+          "p": [
+            "My overhead is low, my calendar is mine, and every project gets my actual hands, not an intern's. For the small businesses I serve best, that equation wins against big agencies more often than ego admits."
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "kape-diwata",
+      "title": "A myth rebrewed",
+      "client": "Kape Diwata Coffee Roasters",
+      "year": 2025,
+      "category": "Branding",
+      "tags": [
+        "Identity",
+        "Packaging",
+        "Art Direction"
+      ],
+      "blurb": "A heritage identity for a Batangas roaster — turning a beloved café into a retail brand that flies off shelves.",
+      "featured": true,
+      "overview": {
+        "services": [
+          "Brand Strategy",
+          "Visual Identity",
+          "Packaging",
+          "Menu & Collateral"
+        ],
+        "collaborators": [
+          "Dela Peña Print Works (printing)",
+          "Studio Kalatas (photography)"
+        ],
+        "duration": "5 weeks"
+      },
+      "challenge": {
+        "problem": "Kape Diwata's café was a neighborhood institution, but its bags sat invisible beside glossy competitors on supermarket shelves. The old mark — a generic coffee cup clip-art — told no story, and three generations of loyal customers couldn't find the brand they loved in retail.",
+        "goals": [
+          "Create an ownable mark rooted in the diwata mythology of Batangas forests",
+          "Design packaging that survives both chalkboard cafés and supermarket aisles",
+          "Build a system Mara's team can apply without a designer on call"
+        ]
+      },
+      "processIntro": "Six weeks from questionnaire to press check. Here is how it unfolded — including the sketches that almost didn't make it.",
+      "process": [
+        {
+          "title": "Discovery & audit",
+          "body": "Two workshops with Mara plus interviews with eleven regulars revealed the truth: people didn't love Kape Diwata despite its rough edges — they loved it because it felt like family. The strategy became \"myth made warm,\" not \"premium minimalism.\"",
+          "seed": "kape-audit"
+        },
+        {
+          "title": "Sketching the guardian",
+          "body": "43 pages of thumbnails exploring eyes, leaves, crescents, and kapeng barako steam. Page 17 hid the winner: a closed-eye diwata face formed by negative space inside a coffee cherry. The sketches you keep redrawing are always the signal.",
+          "seed": "kape-sketches"
+        },
+        {
+          "title": "Concepts & pressure tests",
+          "body": "Three directions were developed: \"The Guardian\" (the cherry-eye mark), \"Barako Bloom\" (a batik-inspired floral), and \"First Harvest\" (typographic). Mocked up on real bags, cups, and a tarpaulin outside the actual café, Guardian won unanimously — even the regulars voted.",
+          "seed": "kape-concepts"
+        },
+        {
+          "title": "Refinement to press",
+          "body": "Geometry tightened to an 8px grid, a kraft-vermilion palette profiled against uncoated stock, and type paired (Fraunces + Space Grotesk) so menus could be set by staff. I attended the press check personally; pond-green taught us to never skip color proofs.",
+          "seed": "kape-refine"
+        }
+      ],
+      "solution": {
+        "summary": "A complete identity system: the Diwata Cherry mark, a warm kraft-and-vermilion palette, expressive serif typography, and packaging architecture flexible enough for single-origin drops and house blends alike.",
+        "deliverables": [
+          "Logo suite (primary, secondary, monogram, wordmark)",
+          "Retail packaging system — 250g / 500g / drip boxes",
+          "Café collateral: menus, loyalty cards, aprons, signage",
+          "30-page brand guidelines + editable templates"
+        ],
+        "beforeAfter": {
+          "beforeLabel": "Old label, 2019",
+          "afterLabel": "New system, 2025"
+        }
+      },
+      "results": {
+        "summary": "The rebrand turned a café into a shelf presence. Within one quarter, retail outsold projections and the mark started showing up on customers' tattoos. (One tattoo.)",
+        "metrics": [
+          {
+            "value": "2×",
+            "label": "retail bag sales in 3 months"
+          },
+          {
+            "value": "+38%",
+            "label": "average transaction value"
+          },
+          {
+            "value": "4",
+            "label": "new wholesale accounts signed"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "kape-hero",
+          "caption": "Primary lockup on kraft retail bag"
+        },
+        {
+          "seed": "kape-range",
+          "caption": "Single-origin range — color-coded origins"
+        },
+        {
+          "seed": "kape-cafe",
+          "caption": "In-café application: menu board & cups"
+        },
+        {
+          "seed": "kape-type",
+          "caption": "Typography specimens & usage rules"
+        }
+      ]
+    },
+    {
+      "slug": "isla-skincare",
+      "title": "Calm that converts",
+      "client": "Isla Skincare",
+      "year": 2024,
+      "category": "Web Design",
+      "tags": [
+        "E-commerce",
+        "UX/UI",
+        "Design System"
+      ],
+      "blurb": "An e-commerce experience as gentle and precise as the formulas inside — checkout conversion nearly tripled.",
+      "featured": true,
+      "overview": {
+        "services": [
+          "UX Research",
+          "Web Design",
+          "Design System",
+          "Dev Handoff"
+        ],
+        "collaborators": [
+          "Northloop Devs (development)",
+          "Isla in-house copy team"
+        ],
+        "duration": "6 weeks"
+      },
+      "challenge": {
+        "problem": "Isla's products were winning dermatologist praise while their website looked like a spreadsheet from 2014. Mobile shoppers abandoned carts at 82%, ingredient education lived in PDFs, and the brand's calm science story was nowhere on screen.",
+        "goals": [
+          "Rebuild trust into the interface: clarity over cleverness",
+          "Make ingredient education part of the shopping flow",
+          "Cut mobile checkout steps from five screens to two"
+        ]
+      },
+      "processIntro": "Paper first, pixels second. Every screen earned its place by doing one job well.",
+      "process": [
+        {
+          "title": "Research & receipts",
+          "body": "Session recordings showed users hunting for concentrations and patch-test info mid-purchase. A card sort with 24 customers reshaped navigation around skin concerns, not product categories.",
+          "seed": "isla-research"
+        },
+        {
+          "title": "Wireframes on paper",
+          "body": "Each page got a verb (\"reassure\", \"prove\", \"invite\") sketched in five boxes or fewer. This caught the biggest flaw early: the old site buried proof (clinical results) below the fold on every template.",
+          "seed": "isla-wireframes"
+        },
+        {
+          "title": "Design system",
+          "body": "A quiet system built on generous whitespace, a clinical-yet-warm palette (porcelain, sea glass, ink), and a component library covering 40+ states so developers never improvised.",
+          "seed": "isla-system"
+        },
+        {
+          "title": "Prototype & test",
+          "body": "Clickable prototype tested with 8 users. Two rounds later: sticky ingredient glossary, one-page checkout with guest-first flow, and dosage-style product pages (\"AM/PM\" routines) that made complexity feel cared for.",
+          "seed": "isla-proto"
+        }
+      ],
+      "solution": {
+        "summary": "A conversion-tested e-commerce experience: concern-based navigation, ingredient-forward product pages, and a two-step mobile checkout wrapped in a serene design system.",
+        "deliverables": [
+          "Figma design system (120+ components)",
+          "18 templated page designs, desktop + mobile",
+          "Interactive prototype for user testing",
+          "Developer handoff specs & QA support"
+        ]
+      },
+      "results": {
+        "summary": "Shipped quietly, performed loudly. The new flow turned browsers into believers — and repeat buyers.",
+        "metrics": [
+          {
+            "value": "0.9%→2.4%",
+            "label": "checkout conversion rate"
+          },
+          {
+            "value": "-46%",
+            "label": "mobile cart abandonment"
+          },
+          {
+            "value": "+61%",
+            "label": "time on ingredient pages"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "isla-home",
+          "caption": "Homepage — calm hierarchy, proof upfront"
+        },
+        {
+          "seed": "isla-pdp",
+          "caption": "Product page with AM/PM routine builder"
+        },
+        {
+          "seed": "isla-mobile",
+          "caption": "Two-step mobile checkout"
+        }
+      ]
+    },
+    {
+      "slug": "bayanihan-bank",
+      "title": "Money in motion",
+      "client": "Bayanihan Bank",
+      "year": 2025,
+      "category": "Motion",
+      "tags": [
+        "Motion System",
+        "App Design",
+        "Toolkit"
+      ],
+      "blurb": "A motion language for a fintech serving overseas Filipino families — every peso animated with dignity.",
+      "featured": true,
+      "overview": {
+        "services": [
+          "Motion Identity",
+          "Animation Toolkit",
+          "Team Training"
+        ],
+        "collaborators": [
+          "Bayanihan product squad (2 designers, 3 engineers)"
+        ],
+        "duration": "4 weeks"
+      },
+      "challenge": {
+        "problem": "Bayanihan Bank remits money home for 400,000+ overseas workers, yet its app felt like a tax form. Marketing videos, product demos, and social posts each moved differently — there was no shared motion language, so nothing felt trustworthy.",
+        "goals": [
+          "Define motion principles that communicate security and warmth",
+          "Ship a toolkit any designer can use without After Effects expertise",
+          "Cut video production time from weeks to hours"
+        ]
+      },
+      "processIntro": "Motion is a brand voice you can hear with your eyes. We gave Bayanihan its speaking notes.",
+      "process": [
+        {
+          "title": "Motion audit",
+          "body": "Catalogued 60 existing animations across app, ads, and decks. Found 14 easing curves in active use — visual noise that read as instability. Users described transfers as \"nerve-wracking\"; we had our villain.",
+          "seed": "bayani-audit"
+        },
+        {
+          "title": "Principles & grammar",
+          "body": "Three principles set the law: \"steady hands\" (slow entrances, zero bounce on money states), \"one hero move\" per scene, and \"arrive, don't perform.\" Money never spins, bounces, or plays — it lands.",
+          "seed": "bayani-grammar"
+        },
+        {
+          "title": "Prototype the moments that matter",
+          "body": "High-fidelity prototypes tested the anxiety points: sending confirmation, waiting state, delivery celebration. The winning pattern — a soft pulse that resolves into a checkmark — reduced perceived wait time dramatically in tests.",
+          "seed": "bayani-proto"
+        },
+        {
+          "title": "Toolkit & training",
+          "body": "Delivered Lottie libraries, Figma Smart Animate recipes, and After Effects templates with locked easing presets. Two workshops trained the in-house team to ship on-brand video without me.",
+          "seed": "bayani-toolkit"
+        }
+      ],
+      "solution": {
+        "summary": "A complete motion identity: principles, easing tokens, Lottie animation libraries for 30+ UI moments, and templates that let the marketing team produce broadcast-quality spots in-house.",
+        "deliverables": [
+          "Motion principles & easing token spec",
+          "Lottie library — 30+ app micro-moments",
+          "After Effects templates for campaigns",
+          "2 training workshops + documentation wiki"
+        ]
+      },
+      "results": {
+        "summary": "The system shipped across app v4 and every launch campaign since. Motion stopped being a bottleneck and started being a moat.",
+        "metrics": [
+          {
+            "value": "90hrs→4hrs",
+            "label": "average campaign video production"
+          },
+          {
+            "value": "+27%",
+            "label": "transfer completion rate"
+          },
+          {
+            "value": "100%",
+            "label": "of new features animated on-brand at launch"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "bayani-hero",
+          "caption": "Send-money confirmation — steady hands principle"
+        },
+        {
+          "seed": "bayani-campaign",
+          "caption": "Launch campaign frames"
+        },
+        {
+          "seed": "bayani-library",
+          "caption": "Lottie library overview board"
+        }
+      ]
+    },
+    {
+      "slug": "halo-hotel",
+      "title": "Light between islands",
+      "client": "Halo Hotel",
+      "year": 2024,
+      "category": "Motion",
+      "tags": [
+        "Brand Film",
+        "Title Design",
+        "Idents"
+      ],
+      "blurb": "Title cards and idents for a boutique island hotel — hospitality that moves at sunset speed.",
+      "featured": false,
+      "overview": {
+        "services": [
+          "Motion Idents",
+          "Title Card System",
+          "Social Video Kit"
+        ],
+        "collaborators": [
+          "Studio Kalatas (film footage)",
+          "Halo marketing team"
+        ],
+        "duration": "3 weeks"
+      },
+      "challenge": {
+        "problem": "Halo Hotel's photography was stunning; its videos were chaos. Every reel used different fonts, transitions, and pacing, so a premium property read like a discount deal page.",
+        "goals": [
+          "Create idents that make 5 seconds feel like an exhale",
+          "Standardize title cards for events, promos, and wayfinding screens",
+          "Give a non-designer team tools they can actually reuse"
+        ]
+      },
+      "processIntro": "Slow motion isn't slow to watch — it's expensive to fake. We designed restraint.",
+      "process": [
+        {
+          "title": "Frame the feeling",
+          "body": "Reference films were cut into a \"pace map\": Halo lives at 70% speed with 12-frame dissolves. Anything snappy was banned on sight.",
+          "seed": "halo-feeling"
+        },
+        {
+          "title": "Type in motion",
+          "body": "Tested how their serif breathes when letters fade in like tide lines. Built title cards where text arrives on light rays, never slides like lower-thirds.",
+          "seed": "halo-type"
+        },
+        {
+          "title": "Idents & kit",
+          "body": "Produced three master idents (sunrise, noon, dusk) and a CapCut-friendly kit — yes, CapCut — because sustainability means meeting the team where they work.",
+          "seed": "halo-kit"
+        }
+      ],
+      "solution": {
+        "summary": "Three signature idents, a modular title-card system, and a lightweight editing kit that keeps every Halo frame unhurried and unmistakably theirs.",
+        "deliverables": [
+          "3 brand idents (15s / 10s / 5s)",
+          "Title card system — 8 layouts",
+          "CapCut + Premiere template kit"
+        ]
+      },
+      "results": {
+        "summary": "The idents premiered at Halo's anniversary gala and now open every film the hotel ships.",
+        "metrics": [
+          {
+            "value": "3.1M",
+            "label": "organic views in first quarter"
+          },
+          {
+            "value": "+52%",
+            "label": "reel engagement rate"
+          },
+          {
+            "value": "0",
+            "label": "off-brand videos since handover"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "halo-hero",
+          "caption": "Sunrise ident — final frame"
+        },
+        {
+          "seed": "halo-titles",
+          "caption": "Title card layouts in situ"
+        }
+      ]
+    },
+    {
+      "slug": "tala-paper-goods",
+      "title": "Small joys, printed",
+      "client": "Tala Paper Co.",
+      "year": 2023,
+      "category": "Print",
+      "tags": [
+        "Stationery",
+        "Illustration",
+        "Print Production"
+      ],
+      "blurb": "A stationery line of 32 SKUs that turns grocery-list scribbles into small acts of joy.",
+      "featured": false,
+      "overview": {
+        "services": [
+          "Collection Design",
+          "Pattern Illustration",
+          "Print Management"
+        ],
+        "collaborators": [
+          "Papel Press (production)",
+          "Tala founders (illustration direction)"
+        ],
+        "duration": "4 weeks"
+      },
+      "challenge": {
+        "problem": "Tala could illustrate beautifully but couldn't build a collection: 32 disconnected SKUs, inconsistent paper stocks, and margins eaten by print overruns.",
+        "goals": [
+          "Unify 32 products into a collectible system",
+          "Reduce print waste through smarter sheet planning",
+          "Launch a holiday capsule without doubling workload"
+        ]
+      },
+      "processIntro": "Print teaches humility: every decision meets physics eventually.",
+      "process": [
+        {
+          "title": "SKU autopsy",
+          "body": "Spread all 32 products on my studio floor and mapped which sold, which stalled. Patterns emerged: bold singles beat busy scenes. The collection needed stars and supporting cast, not 32 leads.",
+          "seed": "tala-autopsy"
+        },
+        {
+          "title": "Pattern system",
+          "body": "Designed 6 base patterns with swap-in motifs (stars, tala moons, native blooms) that generate dozens of variants while sharing ink keys — cutting plate costs per SKU.",
+          "seed": "tala-patterns"
+        },
+        {
+          "title": "Press wrangling",
+          "body": "Imposed sheets to nest 9 SKUs per run, chose two stocks instead of four, and specified soy inks. Overruns dropped from 18% to 4%.",
+          "seed": "tala-press"
+        }
+      ],
+      "solution": {
+        "summary": "A modular stationery system: 6 patterns × motif swaps = a coherent 32-SKU collection that prints efficiently and stacks beautifully on shelves.",
+        "deliverables": [
+          "32-SKU collection design (notebooks, cards, wrap)",
+          "6-pattern illustration library",
+          "Holiday capsule (8 SKUs) using same plates",
+          "Print specifications & production management"
+        ]
+      },
+      "results": {
+        "summary": "The collection launched at Manila FAME and sold through its first print run in six weeks.",
+        "metrics": [
+          {
+            "value": "-78%",
+            "label": "print overruns vs previous season"
+          },
+          {
+            "value": "6 wks",
+            "label": "to sell out first run"
+          },
+          {
+            "value": "12",
+            "label": "new retail stockists"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "tala-hero",
+          "caption": "Collection flat lay — core range"
+        },
+        {
+          "seed": "tala-detail",
+          "caption": "Pattern detail on notebook cloth spine"
+        }
+      ]
+    },
+    {
+      "slug": "sining-festival",
+      "title": "Sixty artists, one voice",
+      "client": "Sining Festival",
+      "year": 2024,
+      "category": "Branding",
+      "tags": [
+        "Event Identity",
+        "Wayfinding",
+        "Campaign"
+      ],
+      "blurb": "A festival identity flexible enough for 60 artists yet recognizable from across the plaza.",
+      "featured": false,
+      "overview": {
+        "services": [
+          "Event Branding",
+          "Campaign Design",
+          "Environmental Graphics"
+        ],
+        "collaborators": [
+          "City cultural council",
+          "Volunteer install crew (30 people)"
+        ],
+        "duration": "6 weeks"
+      },
+      "challenge": {
+        "problem": "A city-wide arts festival with 60 participating artists, 9 venues, and a volunteer crew meant previous identities dissolved into visual soup. Posters looked like they came from different planets; attendance skewed to whoever advertised loudest.",
+        "goals": [
+          "One identity that flexes per artist without breaking",
+          "Wayfinding a first-time visitor can follow at night",
+          "Templates volunteers can deploy without design software"
+        ]
+      },
+      "processIntro": "Systems design for humans who will absolutely improvise. Plan for it.",
+      "process": [
+        {
+          "title": "Map the chaos",
+          "body": "Audited last year's 200+ assets and interviewed volunteers. The insight: rules nobody can execute are decoration. The system had to survive being applied from a phone.",
+          "seed": "sining-map"
+        },
+        {
+          "title": "The frame concept",
+          "body": "Every artist artwork lives inside a signature \"sining frame\" — a hand-drawn border that stays constant while content goes wild. Recognition comes from the container, not conformity.",
+          "seed": "sining-frame"
+        },
+        {
+          "title": "Night-proof wayfinding",
+          "body": "Tested signage prototypes at 7pm in actual plaza lighting. High-contrast vermilion flags with oversized numerals won — readable from 40 meters under sodium lamps.",
+          "seed": "sining-wayfind"
+        },
+        {
+          "title": "Volunteer toolkit",
+          "body": "Built fill-in-the-blank poster templates in Canva with locked zones. 300+ compliant posters were produced by non-designers during festival week. Zero rogue fonts reported. Miracles happen.",
+          "seed": "sining-toolkit"
+        }
+      ],
+      "solution": {
+        "summary": "A frame-based festival identity with artist-flexible interiors, night-legible wayfinding, and volunteer-proof templates that kept 60 voices in harmony.",
+        "deliverables": [
+          "Master identity & frame system",
+          "Wayfinding suite — flags, banners, maps",
+          "Canva template kit for volunteers",
+          "Merchandise line (shirts, totes, stickers)"
+        ]
+      },
+      "results": {
+        "summary": "Record attendance, a city asking to license the identity for next year, and posters disappearing from walls fast enough to be considered a compliment crime.",
+        "metrics": [
+          {
+            "value": "+64%",
+            "label": "festival attendance YoY"
+          },
+          {
+            "value": "9/9",
+            "label": "venues fully branded & navigable"
+          },
+          {
+            "value": "300+",
+            "label": "volunteer-made posters, all on-brand"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "sining-hero",
+          "caption": "Master campaign key visual"
+        },
+        {
+          "seed": "sining-flags",
+          "caption": "Plaza wayfinding flags at dusk"
+        },
+        {
+          "seed": "sining-posters",
+          "caption": "Artist series — frame system variations"
+        }
+      ]
+    },
+    {
+      "slug": "luntian-farms",
+      "title": "Farm fresh, finally online",
+      "client": "Luntian Farms",
+      "year": 2023,
+      "category": "Web Design",
+      "tags": [
+        "Website",
+        "Branding Refresh",
+        "Photography Direction"
+      ],
+      "blurb": "From Facebook Marketplace to a farm-direct store that sells out weekly harvest boxes.",
+      "featured": false,
+      "overview": {
+        "services": [
+          "Brand Refresh",
+          "Web Design & Build",
+          "Photo Art Direction"
+        ],
+        "collaborators": [
+          "Luntian family team",
+          "Klik Labs (build partner)"
+        ],
+        "duration": "5 weeks"
+      },
+      "challenge": {
+        "problem": "Luntian grew the best vegetables in the province and communicated exclusively via blurry Facebook posts. Weekly harvest boxes sold out by luck, not system, and wholesale buyers couldn't find basic info like certifications.",
+        "goals": [
+          "Refresh the brand just enough — keep the homemade soul, lose the blur",
+          "Launch farm-direct ordering that a Lolo could operate",
+          "Document certifications and farm story once, properly"
+        ]
+      },
+      "processIntro": "A refresh, not a redesign — the equity was in the handwriting, literally.",
+      "process": [
+        {
+          "title": "Audit & refresh scope",
+          "body": "Kept the hand-drawn leaf logo (customers tattooed... okay, doodled it on delivery notes) and refined everything around it: type, colors, photo direction. New green pulled straight from actual leaves, not Pantoneland.",
+          "seed": "luntian-refresh"
+        },
+        {
+          "title": "Order flow on paper",
+          "body": "Mapped the harvest box flow to three taps max. Wireframes tested with actual customers aged 19 to 71 — the 71-year-old finished fastest, which became our benchmark persona.",
+          "seed": "luntian-flow"
+        },
+        {
+          "title": "Design & build",
+          "body": "Designed mobile-first with big tap targets, real farm photography (art-directed a half-day shoot), and a build partner who kept Lighthouse scores above 95.",
+          "seed": "luntian-design"
+        }
+      ],
+      "solution": {
+        "summary": "A refreshed identity and a warm, fast farm-direct website: three-tap harvest box ordering, transparent sourcing pages, and photography that tastes like Sunday morning.",
+        "deliverables": [
+          "Brand refresh (logo refinement, palette, type, photo style)",
+          "Responsive website — shop, subscriptions, story pages",
+          "Photography art direction & shot list",
+          "Simple CMS training for the family team"
+        ],
+        "beforeAfter": {
+          "beforeLabel": "Facebook era, 2022",
+          "afterLabel": "Farm direct, 2023"
+        }
+      },
+      "results": {
+        "summary": "Harvest boxes now sell out on schedule, and the farm finally ranks for its own name.",
+        "metrics": [
+          {
+            "value": "100%",
+            "label": "weekly boxes sold out post-launch"
+          },
+          {
+            "value": "#1",
+            "label": "Google rank for \"harvest box Batangas\""
+          },
+          {
+            "value": "+45%",
+            "label": "subscription sign-ups in 2 months"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "luntian-hero",
+          "caption": "Harvest box landing page"
+        },
+        {
+          "seed": "luntian-shop",
+          "caption": "Mobile ordering flow — three taps to checkout"
+        }
+      ]
+    },
+    {
+      "slug": "merienda-co",
+      "title": "Snack o'clock, upgraded",
+      "client": "Merienda Co.",
+      "year": 2023,
+      "category": "Print",
+      "tags": [
+        "Menus",
+        "Packaging",
+        "Collateral"
+      ],
+      "blurb": "Menus and merienda boxes for a modern Filipino snack bar — nostalgia you can hold with greasy fingers.",
+      "featured": false,
+      "overview": {
+        "services": [
+          "Menu System",
+          "Packaging",
+          "Signage"
+        ],
+        "collaborators": [
+          "Merienda Co. kitchen team",
+          "Dela Peña Print Works"
+        ],
+        "duration": "3 weeks"
+      },
+      "challenge": {
+        "problem": "Great food, tragic menus: laminated inkjet printouts with Comic Sans energy. Takeaway boxes leaked brand personality (and occasionally sauce). Nothing matched, everything embarrassed.",
+        "goals": [
+          "Menu system that survives daily price changes",
+          "Takeaway packaging worth photographing",
+          "Interior signage that guides without shouting"
+        ]
+      },
+      "processIntro": "Fast casual print has a secret job: survive rush hour and still look delicious at close.",
+      "process": [
+        {
+          "title": "Rush-hour shadowing",
+          "body": "Spent a Friday shift observing servers. Menus get slammed on counters, folded wrong, and stabbed by pens. Materials spec wrote itself: synthetic paper, sewn binding, ink that laughs at grease.",
+          "seed": "merienda-shadow"
+        },
+        {
+          "title": "Modular menu system",
+          "body": "Grid-based inserts let the kitchen reprint price panels without touching design. Illustrated icons for every dish mean the menu works for tourists too — order by picture, eat happy.",
+          "seed": "merienda-menu"
+        },
+        {
+          "title": "Box engineering",
+          "body": "Prototyped three box structures with the printer; the winner survived a tricycle ride test (actual route, actual driver, actual merienda). Greaseproof liner integrated, stamp-applied branding to keep unit costs low.",
+          "seed": "merienda-box"
+        }
+      ],
+      "solution": {
+        "summary": "A durable, delightful print system: grease-proof menus with swappable panels, illustrated dish icons, stamped takeaway boxes, and wall signage that reads at queue distance.",
+        "deliverables": [
+          "Menu system with replaceable insert panels",
+          "Illustrated icon library (24 dishes)",
+          "Takeaway box & cup sleeve packaging",
+          "Wall menu boards & window decals"
+        ]
+      },
+      "results": {
+        "summary": "Customers photograph the boxes unprompted; the kitchen updates prices in-house every month.",
+        "metrics": [
+          {
+            "value": "0",
+            "label": "menu reprint costs since launch (panels only)"
+          },
+          {
+            "value": "+31%",
+            "label": "takeaway orders in 2 months"
+          },
+          {
+            "value": "1",
+            "label": "tricycle crash test passed"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "seed": "merienda-hero",
+          "caption": "Counter menu with swappable panels"
+        },
+        {
+          "seed": "merienda-boxes",
+          "caption": "Takeaway system — stamps, sleeves, boxes"
+        }
+      ]
+    }
+  ]
+}
