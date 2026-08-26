@@ -1,17 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: '#FAFAF8',
-        foreground: '#1A1A1A',
-        muted: '#F5F3F0',
-        'muted-foreground': '#6B6B6B',
-        accent: '#B8860B',
-        'accent-secondary': '#D4A84B',
-        border: '#E8E4DF',
-        card: '#FFFFFF',
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        'muted-foreground': 'rgb(var(--muted-foreground) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        'accent-secondary': 'rgb(var(--accent-secondary) / <alpha-value>)',
+        border: 'rgb(var(--border) / <alpha-value>)',
+        card: 'rgb(var(--card) / <alpha-value>)',
+        'card-foreground': 'rgb(var(--card-foreground) / <alpha-value>)',
+        ring: 'rgb(var(--ring) / <alpha-value>)',
       },
       fontFamily: {
         display: ['"Playfair Display"', 'Georgia', 'serif'],
@@ -28,12 +31,17 @@ export default {
         'tracked-wide': '0.15em',
       },
       boxShadow: {
-        sm: '0 1px 2px rgba(26,26,26,0.04)',
-        md: '0 4px 12px rgba(26,26,26,0.06)',
-        lg: '0 8px 24px rgba(26,26,26,0.08)',
-        accent: '0 4px 14px rgba(184,134,11,0.2)',
+        sm: '0 1px 2px rgba(0,0,0,0.06)',
+        md: '0 4px 12px rgba(0,0,0,0.08)',
+        lg: '0 8px 24px rgba(0,0,0,0.12)',
+        accent: '0 4px 14px rgba(184,134,11,0.25)',
       },
-
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
     },
   },
   plugins: [],

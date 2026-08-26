@@ -90,12 +90,16 @@ export function classifyRepo(repo: GithubRepo): RepoType {
   // Mobile detection
   if (['dart', 'swift', 'kotlin', 'objective-c'].includes(lang)) return 'Mobile'
   if (topics.some((t) => ['react-native', 'flutter', 'android', 'ios', 'mobile'].includes(t))) return 'Mobile'
-  if (name.includes('react-native') || name.includes('flutter') || name.includes('-app') && !name.includes('web')) return 'Mobile'
+  if (name.includes('flutter') || name.includes('react-native')) return 'Mobile'
+  // Specific repo name matches
+  if (name.includes('smart-agri') || name.includes('leafy') || name.includes('wattmat') || name.includes('gymrecord')) return 'Mobile'
 
   // Desktop detection
-  if (['c#', 'c++'].includes(lang) && topics.some((t) => ['desktop', 'wpf', 'winforms', 'gui'].includes(t))) return 'Desktop'
   if (topics.some((t) => ['electron', 'tauri', 'desktop', 'gui'].includes(t))) return 'Desktop'
   if (name.includes('electron') || name.includes('tauri') || name.includes('desktop')) return 'Desktop'
+  // C# projects are typically desktop
+  if (lang === 'c#' || name.includes('.csharp') || name.includes('c-sharp') || name.includes('csharp')) return 'Desktop'
+  if (name.includes('console_') || name.includes('erp_') || name.includes('chess') || name.includes('multi-games')) return 'Desktop'
 
   // Web detection
   if (['html', 'css', 'php', 'ruby'].includes(lang)) return 'Web'

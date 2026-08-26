@@ -3,14 +3,44 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 50 50 48;      /* #FAFAF8 */
+    --foreground: 26 26 26;      /* #1A1A1A */
+    --muted: 245 243 240;        /* #F5F3F0 */
+    --muted-foreground: 107 107 107; /* #6B6B6B */
+    --accent: 184 134 11;        /* #B8860B */
+    --accent-secondary: 212 168 75;  /* #D4A84B */
+    --border: 232 228 223;       /* #E8E4DF */
+    --card: 255 255 255;         /* #FFFFFF */
+    --card-foreground: 26 26 26;
+    --ring: 184 134 11;
+  }
+
+  .dark {
+    --background: 18 18 18;      /* #121212 */
+    --foreground: 245 243 240;   /* #F5F3F0 */
+    --muted: 30 30 30;           /* #1E1E1E */
+    --muted-foreground: 158 158 158; /* #9E9E9E */
+    --accent: 212 168 75;        /* #D4A84B lighter gold for dark */
+    --accent-secondary: 184 134 11; /* #B8860B */
+    --border: 45 45 45;          /* #2D2D2D */
+    --card: 26 26 26;            /* #1A1A1A */
+    --card-foreground: 245 243 240;
+    --ring: 212 168 75;
+  }
+
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply antialiased;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: "Source Sans 3", system-ui, sans-serif;
   }
   ::selection {
-    @apply bg-accent text-white;
+    background-color: rgb(var(--accent));
+    color: white;
   }
 }
 
@@ -25,27 +55,47 @@
     min-height: 44px;
   }
   .btn-solid {
-    @apply btn bg-accent text-white shadow-sm hover:bg-accent-secondary hover:shadow-accent hover:-translate-y-0.5 active:translate-y-0;
+    @apply btn text-white shadow-sm hover:shadow-accent hover:-translate-y-0.5 active:translate-y-0;
+    background-color: rgb(var(--accent));
+  }
+  .btn-solid:hover {
+    background-color: rgb(var(--accent-secondary));
   }
 
   /* Secondary / outline button */
   .btn-secondary {
-    @apply btn border border-foreground bg-transparent text-foreground hover:bg-muted hover:border-accent hover:text-accent;
+    @apply btn border bg-transparent;
+    border-color: rgb(var(--foreground));
+    color: rgb(var(--foreground));
+  }
+  .btn-secondary:hover {
+    background-color: rgb(var(--muted));
+    border-color: rgb(var(--accent));
+    color: rgb(var(--accent));
   }
 
   /* Ghost button — underline on hover */
   .btn-ghost {
-    @apply btn bg-transparent text-muted-foreground hover:text-foreground hover:underline hover:decoration-accent hover:underline-offset-4;
+    @apply btn bg-transparent;
+    color: rgb(var(--muted-foreground));
+  }
+  .btn-ghost:hover {
+    color: rgb(var(--foreground));
+    text-decoration: underline;
+    text-decoration-color: rgb(var(--accent));
+    text-underline-offset: 4px;
   }
 
   /* Small caps label — IBM Plex Mono */
   .small-caps {
-    @apply font-mono text-xs font-medium uppercase tracking-[0.15em] text-accent;
+    @apply font-mono text-xs font-medium uppercase tracking-[0.15em];
+    color: rgb(var(--accent));
   }
 
   /* Rule line — thin warm gray */
   .rule-line {
-    @apply h-px w-full bg-border;
+    @apply h-px w-full;
+    background-color: rgb(var(--border));
   }
 
   /* Section label — rule lines flanking small caps */
@@ -53,19 +103,29 @@
     @apply mb-6 flex items-center gap-4;
   }
   .section-label .rule {
-    @apply h-px flex-1 bg-border;
+    @apply h-px flex-1;
+    background-color: rgb(var(--border));
   }
   .section-label .label {
-    @apply font-mono text-xs font-medium uppercase tracking-[0.15em] text-accent;
+    @apply font-mono text-xs font-medium uppercase tracking-[0.15em];
+    color: rgb(var(--accent));
   }
 
   /* Card line — top border separator */
   .card-line {
-    @apply border-t border-border;
+    @apply border-t;
+    border-color: rgb(var(--border));
   }
 
   /* Animated underline link */
   .link-underline {
-    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:after:scale-x-100;
+    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-200;
+    color: rgb(var(--accent));
+  }
+  .link-underline::after {
+    background-color: rgb(var(--accent));
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
   }
 }
