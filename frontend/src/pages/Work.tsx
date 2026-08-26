@@ -1,12 +1,14 @@
 import { useMemo, useState } from 'react'
 import { RepoCard, useRepos } from '../components/RepoCard'
-import { langColor } from '../lib/github'
+import { classifyRepo, langColor } from '../lib/github'
 import { usePageTitle } from '../hooks/usePageTitle'
+import type { RepoType } from '../lib/github'
 
 export default function Work() {
   usePageTitle('Work')
   const repos = useRepos()
-  const [filter, setFilter] = useState<string>('All')
+  const [langFilter, setLangFilter] = useState<string>('All')
+  const [typeFilter, setTypeFilter] = useState<RepoType | 'All'>('All')
 
   const languages = useMemo(() => {
     const counts = new Map<string, number>()
@@ -17,10 +19,15 @@ export default function Work() {
     return ['All', ...[...counts.entries()].sort((a, b) => b[1] - a[1]).map(([l]) => l)]
   }, [repos])
 
-  const filtered = useMemo(
-    () => (filter === 'All' ? repos : repos.filter((r) => (r.language ?? 'Other') === filter)),
-    [repos, filter],
-  )
+  const types: (RepoType | 'All')[] = ['All', 'Web', 'Mobile', 'Desktop', 'Other']
+
+  const filtered = useMemo(() => {
+    return repos.filter((r) => {
+      const langMatch = langFilter === 'All' || (r.language ?? 'Other') === langFilter
+      const typeMatch = typeFilter === 'All' || classifyRepo(r) === typeFilter
+      return langMatch && typeMatch
+    })
+  }, [repos, langFilter, typeFilter])
 
   return (
     <>
@@ -39,28 +46,47 @@ export default function Work() {
           >
             github.com/jshi1223
           </a>{' '}
-          ) — synced live, so this page is always up to date. Hover a card for the details.
+          ) — synced live. Each card shows the README and is classified as Web, Mobile, or Desktop.
         </p>
 
-        {/* Filters */}
-        <div className="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by language">
-          {languages.map((lang) => (
+        {/* Type filter tabs */}
+        <div className="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter by project type">
+          {types.map((t) => (
             <button
-              key={lang}
+              key={t}
               role="tab"
-              aria-selected={filter === lang}
-              onClick={() => setFilter(lang)}
-              className={`flex items-center gap-2 rounded-md border px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-all duration-200 ${
-                filter === lang
+              aria-selected={typeFilter === t}
+              onClick={() => { setTypeFilter(t); setLangFilter('All') }}
+              className={`rounded-md border px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-all duration-200 ${
+                typeFilter === t
                   ? 'border-accent bg-accent text-white'
                   : 'border-border bg-transparent text-foreground hover:border-foreground hover:bg-foreground hover:text-background'
               }`}
             >
+              {t === 'All' ? `All (${repos.length})` : `${t} (${repos.filter((r) => classifyRepo(r) === t).length})`}
+            </button>
+          ))}
+        </div>
+
+        {/* Language filter */}
+        <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Filter by language">
+          {languages.map((lang) => (
+            <button
+              key={lang}
+              role="tab"
+              aria-selected={langFilter === lang}
+              onClick={() => setLangFilter(lang)}
+              className={`flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-[11px] font-medium uppercase tracking-wide transition-all duration-200 ${
+                langFilter === lang
+                  ? 'border-foreground bg-foreground text-background'
+                  : 'border-border bg-transparent text-muted-foreground hover:border-foreground'
+              }`}
+            >
               {lang !== 'All' && (
-                <span className="h-2 w-2 rounded-full" style={{ backgroundColor: langColor(lang === 'Other' ? null : lang) }} />
+                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: langColor(lang === 'Other' ? null : lang) }} />
               )}
               {lang}
-              <span className="opacity-60">
+              <span className="opacity-50">
                 {lang === 'All' ? repos.length : repos.filter((r) => (r.language ?? 'Other') === lang).length}
               </span>
             </button>
@@ -69,7 +95,7 @@ export default function Work() {
       </section>
 
       <section className="container-x pb-32">
-        <div key={filter} className="grid gap-x-8 gap-y-14 sm:grid-cols-2">
+        <div key={`${langFilter}-${typeFilter}`} className="grid gap-x-8 gap-y-14 sm:grid-cols-2">
           {filtered.map((repo, i) => (
             <RepoCard key={repo.name} repo={repo} index={i} />
           ))}

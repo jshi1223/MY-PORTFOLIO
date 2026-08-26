@@ -1,10 +1,24 @@
 import { useEffect, useState } from 'react'
 import Artwork from './Artwork'
-import { fetchRepos, langColor, repoBlurb, repoYear, sortRepos, type GithubRepo } from '../lib/github'
+import { fetchRepos, langColor, repoBlurb, repoYear, sortRepos, classifyRepo, fetchReadme, type GithubRepo, type RepoType } from '../lib/github'
 import snapshot from '../data/github-snapshot.json'
 
 export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number }) {
   const year = repoYear(repo)
+  const type = classifyRepo(repo)
+  const [readme, setReadme] = useState('')
+
+  useEffect(() => {
+    fetchReadme(repo.name).then(setReadme)
+  }, [repo.name])
+
+  const typeLabel: Record<RepoType, string> = {
+    Web: 'Web',
+    Mobile: 'Mobile',
+    Desktop: 'Desktop',
+    Other: 'Code',
+  }
+
   return (
     <a
       href={repo.html_url}
@@ -34,22 +48,29 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
           <span className="h-2 w-2 rounded-full" style={{ backgroundColor: langColor(repo.language) }} />
           {repo.language ?? 'Code'}
         </span>
+        <span className="absolute right-4 top-4 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur">
+          {typeLabel[type]}
+        </span>
         {repo.fork && (
-          <span className="absolute right-4 top-4 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur">
+          <span className="absolute right-4 top-12 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur">
             Fork
           </span>
         )}
       </div>
 
       <div className="mt-4 flex items-start justify-between gap-4">
-        <div>
+        <div className="flex-1">
           <h3 className="font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-accent sm:text-2xl">
             {repo.name}
             <span className="ml-1 inline-block font-mono text-sm font-normal text-muted-foreground">
               {String(index + 1).padStart(2, '0')}
             </span>
           </h3>
-          <p className="line-clamp-1 text-sm text-muted-foreground">{repo.description ?? '\u00A0'}</p>
+          {readme ? (
+            <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{readme}</p>
+          ) : (
+            <p className="mt-1 line-clamp-1 text-sm text-muted-foreground">{repo.description ?? '\u00A0'}</p>
+          )}
         </div>
         <span className="flex shrink-0 items-center gap-2 text-sm font-medium">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-label="stars" className="text-accent">
