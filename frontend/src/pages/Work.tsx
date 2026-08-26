@@ -51,46 +51,52 @@ export default function Work() {
 
         {/* Type filter tabs */}
         <div className="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter by project type">
-          {types.map((t) => (
-            <button
-              key={t}
-              role="tab"
-              aria-selected={typeFilter === t}
-              onClick={() => { setTypeFilter(t); setLangFilter('All') }}
-              className={`rounded-md border px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-all duration-200 ${
-                typeFilter === t
-                  ? 'border-accent bg-accent text-white'
-                  : 'border-border bg-transparent text-foreground hover:border-foreground hover:bg-foreground hover:text-background'
-              }`}
-            >
-              {t === 'All' ? `All (${repos.length})` : `${t} (${repos.filter((r) => classifyRepo(r) === t).length})`}
-            </button>
-          ))}
+          {types.map((t) => {
+            const active = typeFilter === t
+            return (
+              <button
+                key={t}
+                role="tab"
+                aria-selected={active}
+                onClick={() => { setTypeFilter(t); setLangFilter('All') }}
+                className="rounded-md border px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-all duration-200"
+                style={active
+                  ? { backgroundColor: 'rgb(var(--accent))', borderColor: 'rgb(var(--accent))', color: '#fff' }
+                  : { borderColor: 'rgb(var(--border))', color: 'rgb(var(--foreground))' }
+                }
+              >
+                {t === 'All' ? `All (${repos.length})` : `${t} (${repos.filter((r) => classifyRepo(r) === t).length})`}
+              </button>
+            )
+          })}
         </div>
 
         {/* Language filter */}
         <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Filter by language">
-          {languages.map((lang) => (
-            <button
-              key={lang}
-              role="tab"
-              aria-selected={langFilter === lang}
-              onClick={() => setLangFilter(lang)}
-              className={`flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-[11px] font-medium uppercase tracking-wide transition-all duration-200 ${
-                langFilter === lang
-                  ? 'border-foreground bg-foreground text-background'
-                  : 'border-border bg-transparent text-muted-foreground hover:border-foreground'
-              }`}
-            >
-              {lang !== 'All' && (
-                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: langColor(lang === 'Other' ? null : lang) }} />
-              )}
-              {lang}
-              <span className="opacity-50">
-                {lang === 'All' ? repos.length : repos.filter((r) => (r.language ?? 'Other') === lang).length}
-              </span>
-            </button>
-          ))}
+          {languages.map((lang) => {
+            const active = langFilter === lang
+            return (
+              <button
+                key={lang}
+                role="tab"
+                aria-selected={active}
+                onClick={() => setLangFilter(lang)}
+                className="flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-[11px] font-medium uppercase tracking-wide transition-all duration-200"
+                style={active
+                  ? { backgroundColor: 'rgb(var(--foreground))', borderColor: 'rgb(var(--foreground))', color: 'rgb(var(--background))' }
+                  : { borderColor: 'rgb(var(--border))', color: 'rgb(var(--muted-foreground))' }
+                }
+              >
+                {lang !== 'All' && (
+                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: langColor(lang === 'Other' ? null : lang) }} />
+                )}
+                {lang}
+                <span className="opacity-50">
+                  {lang === 'All' ? repos.length : repos.filter((r) => (r.language ?? 'Other') === lang).length}
+                </span>
+              </button>
+            )
+          })}
         </div>
       </section>
 

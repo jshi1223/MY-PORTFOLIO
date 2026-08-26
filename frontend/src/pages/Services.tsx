@@ -23,7 +23,8 @@ export default function Services() {
           <article
             key={s.slug}
             id={s.slug}
-            className="grid scroll-mt-28 gap-8 rounded-lg border border-border bg-card p-8 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-10 lg:grid-cols-[1.4fr_1fr]"
+            className="grid scroll-mt-28 gap-8 rounded-lg border p-8 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-10 lg:grid-cols-[1.4fr_1fr]"
+            style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--card))' }}
           >
             <div>
               <p className="font-display text-lg italic text-accent">0{i + 1}</p>
@@ -43,9 +44,9 @@ export default function Services() {
               </ul>
             </div>
 
-            <div className="flex flex-col justify-between gap-6 rounded-lg bg-muted p-7">
+            <div className="flex flex-col justify-between gap-6 rounded-lg p-7" style={{ backgroundColor: 'rgb(var(--muted))' }}>
               <div className="space-y-5">
-                <div className="card-line pt-4">
+                <div className="card-line pt-4" style={{ borderTopColor: 'rgb(var(--border))' }}>
                   <p className="small-caps">Investment</p>
                   <p className="mt-1 font-display text-4xl font-semibold tracking-tight">{s.price}</p>
                 </div>

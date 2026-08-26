@@ -27,9 +27,9 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg border border-border bg-muted">
+        <div className="relative overflow-hidden rounded-lg border" style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--muted))' }}>
           <Portrait className="aspect-[4/5] w-full" />
-          <span className="absolute bottom-4 left-4 rounded-md bg-foreground/80 px-4 py-1.5 font-mono text-xs font-medium uppercase tracking-[0.15em] text-background backdrop-blur">
+          <span className="absolute bottom-4 left-4 rounded-md px-4 py-1.5 font-mono text-xs font-medium uppercase tracking-[0.15em] backdrop-blur" style={{ backgroundColor: 'rgb(var(--foreground) / 0.8)', color: 'rgb(var(--background))' }}>
             {content.profile.name} — {content.profile.role}
           </span>
         </div>
@@ -80,7 +80,8 @@ export default function About() {
             <Link
               key={s.slug}
               to={`/services#${s.slug}`}
-              className="group flex h-full flex-col rounded-lg border border-border bg-card p-7 shadow-sm transition-all duration-200 hover:shadow-md hover:border-accent"
+              className="group flex h-full flex-col rounded-lg border p-7 shadow-sm transition-all duration-200 hover:shadow-md hover:border-accent"
+              style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--card))' }}
             >
               <span className="font-display italic text-muted-foreground">0{i + 1}</span>
               <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight transition-colors duration-200 group-hover:text-accent">
@@ -94,18 +95,18 @@ export default function About() {
       </section>
 
       {/* ============ PROCESS ============ */}
-      <section className="bg-foreground py-32 text-background">
+      <section style={{ backgroundColor: 'rgb(var(--foreground))', color: 'rgb(var(--background))' }} className="py-32">
         <div className="container-x">
-          <p className="small-caps !text-background/50 mb-3">How we'll work together</p>
+          <p className="small-caps mb-3" style={{ color: 'rgb(var(--background) / 0.5)' }}>How we'll work together</p>
           <h2 className="mt-3 max-w-3xl font-display text-huge font-medium leading-[1.1] tracking-tight">
             Five steps. Zero mystery.
           </h2>
-          <ol className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/20 bg-white/20 sm:grid-cols-2 lg:grid-cols-5">
+          <ol className="mt-14 grid gap-px overflow-hidden rounded-lg sm:grid-cols-2 lg:grid-cols-5" style={{ backgroundColor: 'rgb(var(--background) / 0.1)' }}>
             {content.processSteps.map((step) => (
-              <li key={step.step} className="bg-foreground p-7 transition-colors duration-200 hover:bg-accent">
+              <li key={step.step} className="p-7 transition-colors duration-200 hover:bg-accent" style={{ backgroundColor: 'rgb(var(--foreground))' }}>
                 <p className="font-display text-4xl font-semibold text-accent">{step.step}</p>
                 <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-background/75">{step.body}</p>
+                <p className="mt-3 text-sm leading-relaxed" style={{ color: 'rgb(var(--background) / 0.7)' }}>{step.body}</p>
               </li>
             ))}
           </ol>
@@ -118,11 +119,12 @@ export default function About() {
         <h2 className="font-display text-huge font-medium leading-[1.1] tracking-tight">
           Some good company.
         </h2>
-        <ul className="mt-12 grid grid-cols-2 overflow-hidden rounded-lg border border-border sm:grid-cols-3 lg:grid-cols-5">
+        <ul className="mt-12 grid grid-cols-2 overflow-hidden rounded-lg sm:grid-cols-3 lg:grid-cols-5" style={{ borderColor: 'rgb(var(--border))' }}>
           {content.clients.map((c) => (
             <li
               key={c}
-              className="-mr-px -mb-px flex items-center justify-center border-b border-r border-border px-4 py-8 text-center"
+              className="flex items-center justify-center border-b border-r px-4 py-8 text-center"
+              style={{ borderColor: 'rgb(var(--border))' }}
             >
               <span className="font-display text-lg font-semibold tracking-tight text-muted-foreground transition-colors duration-200 hover:text-accent sm:text-xl">
                 {c}

@@ -26,7 +26,7 @@ export default function Testimonials() {
 
       {/* Featured carousel */}
       <section className="container-x pb-16">
-        <figure className="relative overflow-hidden rounded-lg border border-border bg-foreground p-8 text-background sm:p-14">
+        <figure className="relative overflow-hidden rounded-lg border p-8 sm:p-14" style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--foreground))', color: 'rgb(var(--background))' }}>
           <span aria-hidden className="absolute -top-10 left-8 font-display text-[180px] leading-none text-accent/90 select-none">
             "
           </span>
@@ -37,14 +37,15 @@ export default function Testimonials() {
             <Avatar initials={t.initials} size="lg" />
             <div>
               <p className="font-medium">{t.name}</p>
-              <p className="text-sm text-background/70">
+              <p className="text-sm" style={{ color: 'rgb(var(--background) / 0.6)' }}>
                 {t.role}, {t.company}
               </p>
             </div>
             {project && (
               <Link
                 to={`/work/${project.slug}`}
-                className="ml-auto rounded-md border border-white/30 px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-colors duration-200 hover:border-accent hover:bg-accent"
+                className="ml-auto rounded-md border px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-white"
+                style={{ borderColor: 'rgb(var(--background) / 0.2)' }}
               >
                 View the project →
               </Link>
@@ -52,16 +53,18 @@ export default function Testimonials() {
           </figcaption>
 
           {/* controls */}
-          <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-6">
+          <div className="mt-12 flex items-center justify-between pt-6" style={{ borderTop: '1px solid rgb(var(--background) / 0.1)' }}>
             <div className="flex gap-2">
               {items.map((item, i) => (
                 <button
                   key={item.id}
                   onClick={() => setActive(i)}
                   aria-label={`Show testimonial ${i + 1} of ${items.length}`}
-                  className={`h-2 rounded-full transition-all duration-200 ${
-                    i === active ? 'w-8 bg-accent' : 'w-2 bg-background/40 hover:bg-background'
-                  }`}
+                  className="h-2 rounded-full transition-all duration-200"
+                  style={{
+                    width: i === active ? '32px' : '8px',
+                    backgroundColor: i === active ? 'rgb(var(--accent))' : 'rgb(var(--background) / 0.3)',
+                  }}
                 />
               ))}
             </div>
@@ -69,14 +72,16 @@ export default function Testimonials() {
               <button
                 onClick={() => setActive((active - 1 + items.length) % items.length)}
                 aria-label="Previous testimonial"
-                className="flex h-11 w-11 items-center justify-center rounded-md border border-white/30 transition-colors duration-200 hover:border-accent hover:bg-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-md border transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-white"
+                style={{ borderColor: 'rgb(var(--background) / 0.2)' }}
               >
                 ←
               </button>
               <button
                 onClick={() => setActive((active + 1) % items.length)}
                 aria-label="Next testimonial"
-                className="flex h-11 w-11 items-center justify-center rounded-md border border-white/30 transition-colors duration-200 hover:border-accent hover:bg-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-md border transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-white"
+                style={{ borderColor: 'rgb(var(--background) / 0.2)' }}
               >
                 →
               </button>
@@ -106,7 +111,8 @@ export default function Testimonials() {
                 {proj && (
                   <Link
                     to={`/work/${proj.slug}`}
-                    className="ml-auto rounded-md border border-border px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-foreground hover:text-background"
+                    className="ml-auto rounded-md border px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-foreground hover:text-background"
+                    style={{ borderColor: 'rgb(var(--border))' }}
                     aria-label={`View ${proj.client} project`}
                   >
                     Project ↗

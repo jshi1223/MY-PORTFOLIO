@@ -17,8 +17,9 @@ function Faq({ q, a }: { q: string; a: string }) {
         <span className="font-display text-xl font-semibold tracking-tight">{q}</span>
         <span
           className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-md border text-lg transition-all duration-200 ${
-            open ? 'rotate-45 border-accent bg-accent text-white' : 'border-border'
+            open ? 'rotate-45 border-accent bg-accent text-white' : ''
           }`}
+          style={open ? {} : { borderColor: 'rgb(var(--border))' }}
           aria-hidden
         >
           +
@@ -34,7 +35,7 @@ function Faq({ q, a }: { q: string; a: string }) {
 }
 
 const inputCls =
-  'w-full rounded-md border border-border bg-card px-4 py-3 text-[15px] transition-colors duration-200 placeholder:text-muted-foreground/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20'
+  'w-full rounded-md border bg-card px-4 py-3 text-[15px] transition-colors duration-200 placeholder:text-muted-foreground/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20'
 
 export default function Contact() {
   usePageTitle("Let's create something together")
@@ -54,7 +55,12 @@ export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [message, setMessage] = useState('')
 
-  const calendlySrc = useMemo(() => `${p.calendly}?hide_gdpr_banner=1&background_color=FAFAF8&text_color=1A1A1A&primary_color=B8860B`, [p.calendly])
+  const calendlySrc = useMemo(() => {
+    const isDark = document.documentElement.classList.contains('dark')
+    const bg = isDark ? '1E1E1E' : 'FAFAF8'
+    const fg = isDark ? 'F5F3F0' : '1A1A1A'
+    return `${p.calendly}?hide_gdpr_banner=1&background_color=${bg}&text_color=${fg}&primary_color=B8860B`
+  }, [p.calendly])
 
   const set = (key: keyof typeof form) => (e: { target: { value: string } }) =>
     setForm((f) => ({ ...f, [key]: e.target.value }))
@@ -87,7 +93,7 @@ export default function Contact() {
 
       {/* ============ FORM + INFO ============ */}
       <section className="container-x grid gap-12 pb-32 lg:grid-cols-[1.35fr_1fr]">
-        <form onSubmit={onSubmit} className="rounded-lg border border-border bg-muted p-7 shadow-sm sm:p-10" noValidate={false}>
+        <form onSubmit={onSubmit} className="rounded-lg border p-7 shadow-sm sm:p-10" style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--muted))' }} noValidate={false}>
           <h2 className="font-display text-3xl font-semibold tracking-tight">Project inquiry</h2>
           <p className="mt-2 text-sm text-muted-foreground">
             Fields marked * are required. The more detail, the better my first reply.
@@ -96,52 +102,40 @@ export default function Contact() {
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             <label className="block">
               <span className="small-caps mb-2 block">Name *</span>
-              <input required type="text" value={form.name} onChange={set('name')} placeholder="Juan dela Cruz" className={inputCls} />
+              <input required type="text" value={form.name} onChange={set('name')} placeholder="Juan dela Cruz" className={inputCls} style={{ borderColor: 'rgb(var(--border))' }} />
             </label>
             <label className="block">
               <span className="small-caps mb-2 block">Email *</span>
-              <input required type="email" value={form.email} onChange={set('email')} placeholder="you@company.com" className={inputCls} />
+              <input required type="email" value={form.email} onChange={set('email')} placeholder="you@company.com" className={inputCls} style={{ borderColor: 'rgb(var(--border))' }} />
             </label>
             <label className="block sm:col-span-2">
               <span className="small-caps mb-2 block">Company / brand</span>
-              <input type="text" value={form.company} onChange={set('company')} placeholder="Optional but helpful" className={inputCls} />
+              <input type="text" value={form.company} onChange={set('company')} placeholder="Optional but helpful" className={inputCls} style={{ borderColor: 'rgb(var(--border))' }} />
             </label>
             <label className="block">
               <span className="small-caps mb-2 block">Budget range *</span>
-              <select required value={form.budget} onChange={set('budget')} className={inputCls}>
-                <option value="" disabled>
-                  Select a range…
-                </option>
+              <select required value={form.budget} onChange={set('budget')} className={inputCls} style={{ borderColor: 'rgb(var(--border))' }}>
+                <option value="" disabled>Select a range…</option>
                 {BUDGET_RANGES.map((b) => (
-                  <option key={b} value={b}>
-                    {b}
-                  </option>
+                  <option key={b} value={b}>{b}</option>
                 ))}
               </select>
             </label>
             <label className="block">
               <span className="small-caps mb-2 block">Timeline *</span>
-              <select required value={form.timeline} onChange={set('timeline')} className={inputCls}>
-                <option value="" disabled>
-                  When do you need it?
-                </option>
+              <select required value={form.timeline} onChange={set('timeline')} className={inputCls} style={{ borderColor: 'rgb(var(--border))' }}>
+                <option value="" disabled>When do you need it?</option>
                 {TIMELINES.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
+                  <option key={t} value={t}>{t}</option>
                 ))}
               </select>
             </label>
             <label className="block sm:col-span-2">
               <span className="small-caps mb-2 block">Project type *</span>
-              <select required value={form.project_type} onChange={set('project_type')} className={inputCls}>
-                <option value="" disabled>
-                  What are we making?
-                </option>
+              <select required value={form.project_type} onChange={set('project_type')} className={inputCls} style={{ borderColor: 'rgb(var(--border))' }}>
+                <option value="" disabled>What are we making?</option>
                 {PROJECT_TYPES.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
+                  <option key={t} value={t}>{t}</option>
                 ))}
               </select>
             </label>
@@ -154,6 +148,7 @@ export default function Contact() {
                 onChange={set('description')}
                 placeholder="What are you building, who is it for, and what does success look like? Links to anything relevant are welcome."
                 className={`${inputCls} resize-y`}
+                style={{ borderColor: 'rgb(var(--border))' }}
               />
             </label>
           </div>
@@ -168,12 +163,7 @@ export default function Contact() {
           </button>
 
           {(status === 'sent' || status === 'error') && (
-            <p
-              role="status"
-              className={`mt-5 rounded-md px-4 py-3 text-sm font-medium ${
-                status === 'sent' ? 'bg-accent/10 text-accent' : 'bg-accent/10 text-accent'
-              }`}
-            >
+            <p role="status" className="mt-5 rounded-md bg-accent/10 px-4 py-3 text-sm font-medium text-accent">
               {message}
             </p>
           )}
@@ -181,13 +171,13 @@ export default function Contact() {
 
         {/* Side column */}
         <div className="space-y-8">
-          <div className="rounded-lg bg-foreground p-8 text-background shadow-md">
+          <div className="rounded-lg p-8 shadow-md" style={{ backgroundColor: 'rgb(var(--foreground))', color: 'rgb(var(--background))' }}>
             <h2 className="font-display text-2xl font-semibold tracking-tight">Prefer to talk first?</h2>
-            <p className="mt-2 text-sm leading-relaxed text-background/75">
+            <p className="mt-2 text-sm leading-relaxed" style={{ color: 'rgb(var(--background) / 0.7)' }}>
               Book a free 20-minute discovery call. No slides, no pressure — just a friendly chat about
               whether we're a good fit.
             </p>
-            <div className="mt-6 overflow-hidden rounded-md border border-white/20 bg-background">
+            <div className="mt-6 overflow-hidden rounded-md border" style={{ borderColor: 'rgb(var(--background) / 0.15)', backgroundColor: 'rgb(var(--background))' }}>
               <iframe
                 src={calendlySrc}
                 title="Book a discovery call via Calendly"
@@ -195,7 +185,7 @@ export default function Contact() {
                 className="h-[520px] w-full"
               />
             </div>
-            <p className="mt-4 text-xs text-background/60">
+            <p className="mt-4 text-xs" style={{ color: 'rgb(var(--background) / 0.6)' }}>
               Scheduler not loading? Email{' '}
               <a href={`mailto:${p.email}`} className="link-underline text-accent">
                 {p.email}
@@ -204,7 +194,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-border p-8 shadow-sm">
+          <div className="rounded-lg border p-8 shadow-sm" style={{ borderColor: 'rgb(var(--border))' }}>
             <h2 className="font-display text-2xl font-semibold tracking-tight">Direct lines</h2>
             <ul className="mt-4 space-y-3 text-[15px]">
               <li>
@@ -232,7 +222,7 @@ export default function Contact() {
       </section>
 
       {/* ============ FAQ ============ */}
-      <section className="border-t border-border bg-muted/50 py-32">
+      <section className="py-32" style={{ borderTop: '1px solid rgb(var(--border))', backgroundColor: 'rgb(var(--muted) / 0.5)' }}>
         <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-28">
             <p className="small-caps mb-3">FAQ</p>

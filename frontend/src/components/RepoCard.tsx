@@ -27,13 +27,13 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
       className="group block focus:outline-none"
       aria-label={`${repo.name} on GitHub`}
     >
-      <div className="relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow duration-200 group-hover:shadow-md">
+      <div className="relative overflow-hidden rounded-lg border shadow-sm transition-shadow duration-200 group-hover:shadow-md" style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--card))' }}>
         <div className="aspect-[4/5] sm:aspect-[3/2]">
           <Artwork seed={`repo-${repo.name}`} label={repo.language ?? 'code'} className="h-full w-full" />
         </div>
         {/* Hover overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent p-5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
-          <p className="line-clamp-3 max-w-md text-sm leading-relaxed text-background/90">{repoBlurb(repo)}</p>
+        <div className="absolute inset-0 flex flex-col justify-end p-5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100" style={{ background: 'linear-gradient(to top, rgb(var(--foreground) / 0.9), rgb(var(--foreground) / 0.4) 50%, transparent)' }}>
+          <p className="line-clamp-3 max-w-md text-sm leading-relaxed" style={{ color: 'rgb(var(--background) / 0.85)' }}>{repoBlurb(repo)}</p>
           <span className="mt-3 inline-flex w-fit items-center gap-2 rounded-md bg-accent px-4 py-2 text-xs font-medium uppercase tracking-wide text-white">
             View on GitHub
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
@@ -42,17 +42,18 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
           </span>
         </div>
         <span
-          className="absolute left-4 top-4 flex items-center gap-1.5 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur"
+          className="absolute left-4 top-4 flex items-center gap-1.5 rounded-md border px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur"
+          style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--card) / 0.85)' }}
           title={repo.language ?? 'Unknown language'}
         >
           <span className="h-2 w-2 rounded-full" style={{ backgroundColor: langColor(repo.language) }} />
           {repo.language ?? 'Code'}
         </span>
-        <span className="absolute right-4 top-4 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur">
+        <span className="absolute right-4 top-4 rounded-md border px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur" style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--card) / 0.85)' }}>
           {typeLabel[type]}
         </span>
         {repo.fork && (
-          <span className="absolute right-4 top-12 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur">
+          <span className="absolute right-4 top-12 rounded-md border px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur" style={{ borderColor: 'rgb(var(--border))', backgroundColor: 'rgb(var(--card) / 0.85)' }}>
             Fork
           </span>
         )}
@@ -77,7 +78,7 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
             <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" />
           </svg>
           {repo.stargazers_count}
-          <span className="rounded-md border border-border px-3 py-1 text-xs">{year}</span>
+          <span className="rounded-md border px-3 py-1 text-xs" style={{ borderColor: 'rgb(var(--border))' }}>{year}</span>
         </span>
       </div>
     </a>
