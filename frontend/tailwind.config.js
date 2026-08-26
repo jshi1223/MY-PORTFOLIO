@@ -33,15 +33,7 @@ export default {
         lg: '0 8px 24px rgba(26,26,26,0.08)',
         accent: '0 4px 14px rgba(184,134,11,0.2)',
       },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-      },
-      animation: {
-        marquee: 'marquee 28s linear infinite',
-      },
+
     },
   },
   plugins: [],

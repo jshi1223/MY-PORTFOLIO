@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Artwork from '../components/Artwork'
 import Avatar from '../components/Avatar'
-import Marquee from '../components/Marquee'
 import Portrait from '../components/Portrait'
 import { RepoCard, useRepos } from '../components/RepoCard'
 import { content } from '../data/content'
@@ -125,9 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Marquee />
-
-      {/* ============ INTRO / STATS ============ */}
+      {/* ============ INTRO ============ */}
       <section className="container-x grid gap-12 py-32 lg:grid-cols-[0.85fr_1.05fr_1.3fr]">
         <figure className="relative mx-auto w-full max-w-[250px] -rotate-1 rounded-lg border border-border bg-card p-2 shadow-sm transition-transform duration-200 hover:rotate-0">
           <Portrait className="aspect-[4/5] w-full rounded-md" />
@@ -145,7 +142,7 @@ export default function Home() {
             <span className="italic text-accent">Desktop Dev.</span>
           </h2>
         </div>
-          <div className="space-y-6 text-lg leading-relaxed text-foreground/85 lg:pt-16">
+        <div className="space-y-6 text-lg leading-relaxed text-foreground/85 lg:pt-16">
           <p>
             I've been coding for years — started with frontend, then went full-stack because
             I couldn't stop at just making things pretty. I build web apps with React, mobile apps
@@ -156,18 +153,6 @@ export default function Home() {
             code that someone else can maintain. No over-engineering, no unnecessary complexity —
             just apps that work and people enjoy using.
           </p>
-          <dl className="grid grid-cols-3 gap-6 border-t border-border pt-6">
-            {[
-              ['6+', 'years designing'],
-              ['40+', 'projects shipped'],
-              ['3', 'continents served'],
-            ].map(([v, l]) => (
-              <div key={l}>
-                <dt className="font-display text-4xl font-semibold text-accent">{v}</dt>
-                <dd className="mt-1 font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">{l}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
