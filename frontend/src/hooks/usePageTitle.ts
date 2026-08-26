@@ -4,8 +4,8 @@ import { useLocation } from 'react-router-dom'
 export function usePageTitle(title?: string) {
   useEffect(() => {
     document.title = title
-        ? `${title} — SHI STUDIO®`
-        : 'SHI STUDIO® — I design brands that people remember'
+        ? `${title} — John Vaness`
+        : 'John Vaness M. Aquino — Full-Stack Developer'
   }, [title])
 }
 

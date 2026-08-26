@@ -38,8 +38,8 @@ export default function Nav() {
         }`}
       >
         <div className="container-x flex h-16 items-center justify-between sm:h-20">
-          <Link to="/" className="font-display text-xl font-semibold tracking-tight text-foreground" aria-label="SHI STUDIO home">
-            SHI STUDIO<span className="text-accent">®</span>
+          <Link to="/" className="font-display text-xl font-semibold tracking-tight text-foreground" aria-label="Home">
+            JOHN VANESS
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
