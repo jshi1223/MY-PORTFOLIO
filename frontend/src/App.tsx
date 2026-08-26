@@ -15,7 +15,7 @@ import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
-    <div className="grain flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <ScrollToTop />
       <Nav />
       <main className="flex-1">

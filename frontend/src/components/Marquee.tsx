@@ -9,7 +9,7 @@ export default function Marquee({ text }: { text?: string }) {
     </span>
   ))
   return (
-    <div className="overflow-hidden border-y border-ink/15 bg-ink py-4 text-paper" aria-hidden>
+    <div className="overflow-hidden border-y border-border bg-foreground py-4 text-background" aria-hidden>
       <div className="flex w-max animate-marquee">
         <div className="flex">{row}</div>
         <div className="flex" aria-hidden>{row}</div>

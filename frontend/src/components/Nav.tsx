@@ -33,12 +33,12 @@ export default function Nav() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled ? 'border-b border-ink/10 bg-paper/90 backdrop-blur-md' : 'bg-transparent'
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-200 ${
+          scrolled ? 'border-b border-border bg-background/90 backdrop-blur-md' : 'bg-transparent'
         }`}
       >
         <div className="container-x flex h-16 items-center justify-between sm:h-20">
-          <Link to="/" className="font-display text-xl font-bold tracking-tight" aria-label="SHI STUDIO home">
+          <Link to="/" className="font-display text-xl font-semibold tracking-tight text-foreground" aria-label="SHI STUDIO home">
             SHI STUDIO<span className="text-accent">®</span>
           </Link>
 
@@ -48,8 +48,8 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
-                  `link-underline text-sm font-semibold uppercase tracking-widest ${
-                    isActive ? 'text-accent' : 'text-ink'
+                  `text-sm font-medium tracking-wide transition-colors duration-200 ${
+                    isActive ? 'text-accent' : 'text-muted-foreground hover:text-foreground'
                   }`
                 }
               >
@@ -65,7 +65,7 @@ export default function Nav() {
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-md border border-border md:hidden"
           >
             <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden>
               {open ? (
@@ -80,21 +80,21 @@ export default function Nav() {
 
       {/* Mobile overlay menu */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-ink pt-24 text-paper transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-foreground pt-24 text-background transition-all duration-300 md:hidden ${
           open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <nav className="container-x flex flex-col gap-2" aria-label="Mobile">
-          {[...LINKS, { to: '/testimonials', label: 'Testimonials' }, { to: '/contact', label: 'Start a Project →' }].map(
+        <nav className="container-x flex flex-col gap-1" aria-label="Mobile">
+          {[...LINKS, { to: '/testimonials', label: 'Testimonials' }, { to: '/contact', label: 'Start a Project' }].map(
             (l, i) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 style={{ transitionDelay: `${i * 40}ms` }}
                 className={({ isActive }) =>
-                  `border-b border-paper/15 py-4 font-display text-3xl font-semibold transition-all duration-500 ${
+                  `border-b border-white/10 py-4 font-display text-3xl font-medium transition-all duration-300 ${
                     open ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'
-                  } ${isActive ? 'italic text-accent' : ''}`
+                  } ${isActive ? 'text-accent' : 'text-background'}`
                 }
               >
                 {l.label}
@@ -102,7 +102,7 @@ export default function Nav() {
             ),
           )}
         </nav>
-        <div className="container-x mt-auto pb-10 text-sm text-paper/70">
+        <div className="container-x mt-auto pb-10 text-sm text-background/60">
           <p>{content.profile.email}</p>
           <p>{content.profile.phone}</p>
           <p>{content.profile.location}</p>

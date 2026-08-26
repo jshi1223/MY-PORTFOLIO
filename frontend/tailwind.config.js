@@ -4,33 +4,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: '#F6F1E7',
-        cream: '#EFE7D8',
-        ink: '#17130E',
-        smoke: '#6B6255',
-        accent: '#E8480C',
-        moss: '#2F4A3C',
-        sand: '#D9CBAD',
+        background: '#FAFAF8',
+        foreground: '#1A1A1A',
+        muted: '#F5F3F0',
+        'muted-foreground': '#6B6B6B',
+        accent: '#B8860B',
+        'accent-secondary': '#D4A84B',
+        border: '#E8E4DF',
+        card: '#FFFFFF',
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
-        body: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       fontSize: {
-        'mega': 'clamp(3rem, 9vw, 8.5rem)',
-        'huge': 'clamp(2.25rem, 6vw, 5rem)',
+        mega: 'clamp(3rem, 9vw, 5.5rem)',
+        huge: 'clamp(2rem, 6vw, 3.5rem)',
       },
       letterSpacing: {
-        tightest: '-0.04em',
+        tightest: '-0.02em',
+        tracked: '0.1em',
+        'tracked-wide': '0.15em',
+      },
+      boxShadow: {
+        sm: '0 1px 2px rgba(26,26,26,0.04)',
+        md: '0 4px 12px rgba(26,26,26,0.06)',
+        lg: '0 8px 24px rgba(26,26,26,0.08)',
+        accent: '0 4px 14px rgba(184,134,11,0.2)',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
-        },
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(24px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       animation: {

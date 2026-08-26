@@ -13,14 +13,14 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
       className="group block focus:outline-none"
       aria-label={`${repo.name} on GitHub`}
     >
-      <div className="relative overflow-hidden rounded-2xl border border-ink/15 bg-cream">
-        <div className="aspect-[4/5] transition-transform duration-700 ease-out group-hover:scale-[1.04] sm:aspect-[3/2]">
+      <div className="relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow duration-200 group-hover:shadow-md">
+        <div className="aspect-[4/5] sm:aspect-[3/2]">
           <Artwork seed={`repo-${repo.name}`} label={repo.language ?? 'code'} className="h-full w-full" />
         </div>
         {/* Hover overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/90 via-ink/40 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-          <p className="line-clamp-3 max-w-md text-sm leading-relaxed text-paper/90">{repoBlurb(repo)}</p>
-          <span className="mt-3 inline-flex w-fit items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-bold uppercase tracking-widest text-paper">
+        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent p-5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+          <p className="line-clamp-3 max-w-md text-sm leading-relaxed text-background/90">{repoBlurb(repo)}</p>
+          <span className="mt-3 inline-flex w-fit items-center gap-2 rounded-md bg-accent px-4 py-2 text-xs font-medium uppercase tracking-wide text-white">
             View on GitHub
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
               <path d="M2 10 L10 2 M4 2 H10 V8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -28,14 +28,14 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
           </span>
         </div>
         <span
-          className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full border border-ink/15 bg-paper/85 px-3 py-1 text-[11px] font-bold uppercase tracking-widest backdrop-blur"
+          className="absolute left-4 top-4 flex items-center gap-1.5 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur"
           title={repo.language ?? 'Unknown language'}
         >
           <span className="h-2 w-2 rounded-full" style={{ backgroundColor: langColor(repo.language) }} />
           {repo.language ?? 'Code'}
         </span>
         {repo.fork && (
-          <span className="absolute right-4 top-4 rounded-full border border-ink/15 bg-paper/85 px-3 py-1 text-[11px] font-bold uppercase tracking-widest backdrop-blur">
+          <span className="absolute right-4 top-4 rounded-md border border-border bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-wide backdrop-blur">
             Fork
           </span>
         )}
@@ -45,18 +45,18 @@ export function RepoCard({ repo, index = 0 }: { repo: GithubRepo; index?: number
         <div>
           <h3 className="font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-accent sm:text-2xl">
             {repo.name}
-            <span className="ml-1 inline-block font-body text-sm font-normal text-smoke">
+            <span className="ml-1 inline-block font-mono text-sm font-normal text-muted-foreground">
               {String(index + 1).padStart(2, '0')}
             </span>
           </h3>
-          <p className="line-clamp-1 text-sm text-smoke">{repo.description ?? '\u00A0'}</p>
+          <p className="line-clamp-1 text-sm text-muted-foreground">{repo.description ?? '\u00A0'}</p>
         </div>
-        <span className="flex shrink-0 items-center gap-2 text-sm font-semibold">
+        <span className="flex shrink-0 items-center gap-2 text-sm font-medium">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-label="stars" className="text-accent">
             <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" />
           </svg>
           {repo.stargazers_count}
-          <span className="rounded-full border border-ink/20 px-3 py-1 text-xs">{year}</span>
+          <span className="rounded-md border border-border px-3 py-1 text-xs">{year}</span>
         </span>
       </div>
     </a>

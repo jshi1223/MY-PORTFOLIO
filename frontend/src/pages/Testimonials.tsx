@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Avatar from '../components/Avatar'
-import Reveal from '../components/Reveal'
 import { content } from '../data/content'
 import { getProject } from '../data/projects'
 import { usePageTitle } from '../hooks/usePageTitle'
@@ -16,111 +15,105 @@ export default function Testimonials() {
   return (
     <>
       <section className="container-x pb-14 pt-32 sm:pt-40">
-        <Reveal>
-          <p className="eyebrow">Kind words</p>
-          <h1 className="mt-3 max-w-4xl font-display text-huge font-semibold leading-[0.95] tracking-tightest">
-            Clients say it better than I could<span className="text-accent">.</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-smoke">
-            Real quotes from real projects — each one linked to the case study it came from.
-          </p>
-        </Reveal>
+        <p className="small-caps mb-3">Kind words</p>
+        <h1 className="max-w-4xl font-display text-huge font-medium leading-[1.02] tracking-tight">
+          Clients say it better than I could<span className="text-accent">.</span>
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+          Real quotes from real projects — each one linked to the case study it came from.
+        </p>
       </section>
 
       {/* Featured carousel */}
       <section className="container-x pb-16">
-        <Reveal>
-          <figure className="relative overflow-hidden rounded-3xl border border-ink/15 bg-ink p-8 text-paper sm:p-14">
-            <span aria-hidden className="absolute -top-10 left-8 font-display text-[180px] leading-none text-accent/90 select-none">
-              “
-            </span>
-            <blockquote className="relative max-w-3xl font-display text-2xl font-medium leading-snug tracking-tight sm:text-4xl" key={t.id}>
-              {t.quote}
-            </blockquote>
-            <figcaption className="relative mt-10 flex flex-wrap items-center gap-5">
-              <Avatar initials={t.initials} size="lg" />
-              <div>
-                <p className="font-semibold">{t.name}</p>
-                <p className="text-sm text-paper/70">
-                  {t.role}, {t.company}
-                </p>
-              </div>
-              {project && (
-                <Link
-                  to={`/work/${project.slug}`}
-                  className="ml-auto rounded-full border border-paper/30 px-5 py-2.5 text-xs font-bold uppercase tracking-widest transition-colors hover:border-accent hover:bg-accent"
-                >
-                  View the project →
-                </Link>
-              )}
-            </figcaption>
-
-            {/* controls */}
-            <div className="mt-12 flex items-center justify-between border-t border-paper/15 pt-6">
-              <div className="flex gap-2">
-                {items.map((item, i) => (
-                  <button
-                    key={item.id}
-                    onClick={() => setActive(i)}
-                    aria-label={`Show testimonial ${i + 1} of ${items.length}`}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      i === active ? 'w-8 bg-accent' : 'w-2 bg-paper/40 hover:bg-paper'
-                    }`}
-                  />
-                ))}
-              </div>
-              <div className="flex gap-3">
-                <button
-                  onClick={() => setActive((active - 1 + items.length) % items.length)}
-                  aria-label="Previous testimonial"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/30 transition-colors hover:bg-accent hover:border-accent"
-                >
-                  ←
-                </button>
-                <button
-                  onClick={() => setActive((active + 1) % items.length)}
-                  aria-label="Next testimonial"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/30 transition-colors hover:bg-accent hover:border-accent"
-                >
-                  →
-                </button>
-              </div>
+        <figure className="relative overflow-hidden rounded-lg border border-border bg-foreground p-8 text-background sm:p-14">
+          <span aria-hidden className="absolute -top-10 left-8 font-display text-[180px] leading-none text-accent/90 select-none">
+            "
+          </span>
+          <blockquote className="relative max-w-3xl font-display text-2xl font-medium leading-snug tracking-tight sm:text-4xl" key={t.id}>
+            {t.quote}
+          </blockquote>
+          <figcaption className="relative mt-10 flex flex-wrap items-center gap-5">
+            <Avatar initials={t.initials} size="lg" />
+            <div>
+              <p className="font-medium">{t.name}</p>
+              <p className="text-sm text-background/70">
+                {t.role}, {t.company}
+              </p>
             </div>
-          </figure>
-        </Reveal>
+            {project && (
+              <Link
+                to={`/work/${project.slug}`}
+                className="ml-auto rounded-md border border-white/30 px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-colors duration-200 hover:border-accent hover:bg-accent"
+              >
+                View the project →
+              </Link>
+            )}
+          </figcaption>
+
+          {/* controls */}
+          <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-6">
+            <div className="flex gap-2">
+              {items.map((item, i) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActive(i)}
+                  aria-label={`Show testimonial ${i + 1} of ${items.length}`}
+                  className={`h-2 rounded-full transition-all duration-200 ${
+                    i === active ? 'w-8 bg-accent' : 'w-2 bg-background/40 hover:bg-background'
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setActive((active - 1 + items.length) % items.length)}
+                aria-label="Previous testimonial"
+                className="flex h-11 w-11 items-center justify-center rounded-md border border-white/30 transition-colors duration-200 hover:border-accent hover:bg-accent"
+              >
+                ←
+              </button>
+              <button
+                onClick={() => setActive((active + 1) % items.length)}
+                aria-label="Next testimonial"
+                className="flex h-11 w-11 items-center justify-center rounded-md border border-white/30 transition-colors duration-200 hover:border-accent hover:bg-accent"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </figure>
       </section>
 
       {/* Grid of all */}
-      <section className="container-x grid gap-6 pb-24 md:grid-cols-2 lg:grid-cols-3">
-        {items.map((item, i) => {
+      <section className="container-x grid gap-6 pb-32 md:grid-cols-2 lg:grid-cols-3">
+        {items.map((item) => {
           const proj = item.projectSlug ? getProject(item.projectSlug) : undefined
           return (
-            <Reveal key={item.id} delay={(i % 3) * 100}>
-              <figure className="flex h-full flex-col rounded-2xl border border-ink/15 bg-paper p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_#17130E]">
-                <span aria-hidden className="font-display text-5xl leading-none text-accent">
-                  “
-                </span>
-                <blockquote className="mt-2 flex-1 leading-relaxed">{item.quote}</blockquote>
-                <figcaption className="mt-6 flex items-center gap-3 border-t border-ink/15 pt-5">
-                  <Avatar initials={item.initials} />
-                  <div>
-                    <p className="text-sm font-semibold">{item.name}</p>
-                    <p className="text-xs text-smoke">
-                      {item.role}, {item.company}
-                    </p>
-                  </div>
-                  {proj && (
-                    <Link
-                      to={`/work/${proj.slug}`}
-                      className="ml-auto rounded-full border border-ink/20 px-3 py-1 text-[11px] font-bold uppercase tracking-widest transition-colors hover:bg-ink hover:text-paper"
-                      aria-label={`View ${proj.client} project`}
-                    >
-                      Project ↗
-                    </Link>
-                  )}
-                </figcaption>
-              </figure>
-            </Reveal>
+            <figure key={item.id} className="flex h-full flex-col rounded-lg border border-border bg-card p-7 shadow-sm transition-shadow duration-200 hover:shadow-md">
+              <span aria-hidden className="font-display text-5xl leading-none text-accent">
+                "
+              </span>
+              <blockquote className="mt-2 flex-1 leading-relaxed">{item.quote}</blockquote>
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+                <Avatar initials={item.initials} />
+                <div>
+                  <p className="text-sm font-medium">{item.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {item.role}, {item.company}
+                  </p>
+                </div>
+                {proj && (
+                  <Link
+                    to={`/work/${proj.slug}`}
+                    className="ml-auto rounded-md border border-border px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-foreground hover:text-background"
+                    aria-label={`View ${proj.client} project`}
+                  >
+                    Project ↗
+                  </Link>
+                )}
+              </figcaption>
+            </figure>
           )
         })}
       </section>

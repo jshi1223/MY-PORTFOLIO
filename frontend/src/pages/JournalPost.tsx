@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import Artwork from '../components/Artwork'
 import Portrait from '../components/Portrait'
-import Reveal from '../components/Reveal'
 import { content } from '../data/content'
 import { usePageTitle } from '../hooks/usePageTitle'
 
@@ -17,7 +16,7 @@ export default function JournalPost() {
   if (!post) {
     return (
       <section className="container-x pb-24 pt-40 text-center">
-        <h1 className="font-display text-huge font-semibold tracking-tightest">Post not found</h1>
+        <h1 className="font-display text-huge font-medium tracking-tight">Post not found</h1>
         <Link to="/journal" className="btn-solid mt-8">
           Back to the Journal
         </Link>
@@ -29,80 +28,70 @@ export default function JournalPost() {
 
   return (
     <article className="container-x max-w-4xl pb-24 pt-32 sm:pt-40">
-      <Reveal>
-        <Link to="/journal" className="link-underline text-sm font-semibold uppercase tracking-widest text-smoke">
-          ← Journal
-        </Link>
-        <p className="mt-8 text-xs font-bold uppercase tracking-widest text-accent">{post.category}</p>
-        <h1 className="mt-3 font-display text-huge font-semibold leading-[1.02] tracking-tightest">{post.title}</h1>
-        <p className="mt-5 text-xs uppercase tracking-widest text-smoke">
-          {fmtDate(post.date)} · {post.readTime} · by {content.profile.name}
-        </p>
-      </Reveal>
+      <Link to="/journal" className="link-underline text-sm font-medium uppercase tracking-wide text-muted-foreground">
+        ← Journal
+      </Link>
+      <p className="mt-8 font-mono text-xs font-medium uppercase tracking-wide text-accent">{post.category}</p>
+      <h1 className="mt-3 font-display text-huge font-medium leading-[1.05] tracking-tight">{post.title}</h1>
+      <p className="mt-5 font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
+        {fmtDate(post.date)} · {post.readTime} · by {content.profile.name}
+      </p>
 
-      <Reveal delay={100}>
-        <div className="mt-10 overflow-hidden rounded-2xl border border-ink/15">
-          <div className="aspect-[21/9]">
-            <Artwork seed={post.slug} label={post.category} className="h-full w-full" />
-          </div>
+      <div className="mt-10 overflow-hidden rounded-lg border border-border">
+        <div className="aspect-[21/9]">
+          <Artwork seed={post.slug} label={post.category} className="h-full w-full" />
         </div>
-      </Reveal>
+      </div>
 
       <div className="mt-12">
         {post.blocks.map((block, i) => (
-          <Reveal key={i} delay={50}>
-            <section className="mt-10 first:mt-0">
-              {block.h && (
-                <h2 className="mb-4 font-display text-3xl font-semibold tracking-tight">{block.h}</h2>
-              )}
-              {block.p.map((para, j) => (
-                <p key={j} className="mt-4 text-lg leading-relaxed text-ink/85 first:mt-0">
-                  {para}
-                </p>
-              ))}
-            </section>
-          </Reveal>
+          <section key={i} className="mt-10 first:mt-0">
+            {block.h && (
+              <h2 className="mb-4 font-display text-3xl font-semibold tracking-tight">{block.h}</h2>
+            )}
+            {block.p.map((para, j) => (
+              <p key={j} className="mt-4 text-lg leading-relaxed text-foreground/85 first:mt-0">
+                {para}
+              </p>
+            ))}
+          </section>
         ))}
       </div>
 
       {/* Author box */}
-      <Reveal>
-        <aside className="mt-16 flex flex-col gap-5 rounded-2xl border border-ink/15 bg-cream p-7 sm:flex-row sm:items-center">
-          <Portrait className="h-20 w-20 shrink-0 rounded-full border border-ink/15" rounded />
-          <div>
-            <p className="font-display text-xl font-semibold">Written by {content.profile.name}</p>
-            <p className="mt-1 text-sm leading-relaxed text-smoke">
-              Brand & web designer in Batangas, PH. If you enjoyed this, the newsletter goes out
-              monthly-ish and contains at least one strong opinion per issue.
-            </p>
-            <Link to="/contact" className="link-underline mt-2 inline-block font-semibold text-accent">
-              Start a conversation →
-            </Link>
-          </div>
-        </aside>
-      </Reveal>
+      <aside className="mt-16 flex flex-col gap-5 rounded-lg border border-border bg-muted p-7 sm:flex-row sm:items-center">
+        <Portrait className="h-20 w-20 shrink-0 rounded-full border border-border" rounded />
+        <div>
+          <p className="font-display text-xl font-semibold">Written by {content.profile.name}</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+            Brand & web designer in Batangas, PH. If you enjoyed this, the newsletter goes out
+            monthly-ish and contains at least one strong opinion per issue.
+          </p>
+          <Link to="/contact" className="link-underline mt-2 inline-block font-medium text-accent">
+            Start a conversation →
+          </Link>
+        </div>
+      </aside>
 
       {/* More posts */}
-      <Reveal>
-        <div className="mt-20">
-          <h2 className="eyebrow">Keep reading</h2>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            {others.map((o) => (
-              <Link
-                key={o.slug}
-                to={`/journal/${o.slug}`}
-                className="group rounded-2xl border border-ink/15 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent"
-              >
-                <p className="text-xs font-bold uppercase tracking-widest text-accent">{o.category}</p>
-                <h3 className="mt-2 font-display text-xl font-semibold leading-snug tracking-tight group-hover:text-accent">
-                  {o.title}
-                </h3>
-                <p className="mt-2 line-clamp-2 text-sm text-smoke">{o.excerpt}</p>
-              </Link>
-            ))}
-          </div>
+      <div className="mt-20">
+        <p className="small-caps mb-3">Keep reading</p>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          {others.map((o) => (
+            <Link
+              key={o.slug}
+              to={`/journal/${o.slug}`}
+              className="group rounded-lg border border-border p-6 transition-all duration-200 hover:border-accent hover:shadow-sm"
+            >
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-accent">{o.category}</p>
+              <h3 className="mt-2 font-display text-xl font-semibold leading-snug tracking-tight transition-colors duration-200 group-hover:text-accent">
+                {o.title}
+              </h3>
+              <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{o.excerpt}</p>
+            </Link>
+          ))}
         </div>
-      </Reveal>
+      </div>
     </article>
   )
 }
