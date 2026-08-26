@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-xs font-mono uppercase tracking-[0.15em] text-background/40 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} SHI STUDIO® — Designed & built by Vanessa</p>
+          <p>© {new Date().getFullYear()} — Built by John Vaness M. Aquino</p>
           <p>React + TypeScript + Tailwind + Laravel · Batangas, PH</p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

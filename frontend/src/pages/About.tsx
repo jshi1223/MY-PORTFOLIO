@@ -14,8 +14,8 @@ export default function About() {
         <div className="flex h-full flex-col justify-center">
           <p className="small-caps mb-4">About the human behind the work</p>
           <h1 className="font-display text-huge font-medium leading-[1.02] tracking-tight">
-            Hi, I'm Vanessa<span className="text-accent">.</span> I make brands
-            worth remembering.
+            Hi, I'm Vaness<span className="text-accent">.</span> I build apps
+            worth using.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{p.intro}</p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -46,21 +46,20 @@ export default function About() {
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-foreground/85">
             <p>
-              I grew up in my Lola's sari-sari store in Sto. Tomas, watching her sell by personality:
-              regulars didn't come for the prices, they came for <em>her</em>. Years later in design
-              school it clicked — that's branding. Not logos. Being impossible to confuse with anyone else.
+              I started by tweaking WordPress themes for classmates. Then I discovered that the real
+              power is in building things from scratch — not just making them look good, but making
+              them actually work. That curiosity pulled me from CSS into JavaScript, then into full-stack
+              development.
             </p>
             <p>
-              I spent my early career at a Manila agency learning systems, deadlines, and how to defend a
-              concept to twelve stakeholders before lunch. Then in 2020 I moved home to Batangas, set up a
-              desk facing Mount Makulot, and started SHI STUDIO with one rule:{' '}
-              <strong>work only with people whose products I'd recommend to my Lola.</strong>
+              I've built web apps with React and Next.js, mobile apps with React Native, and desktop
+              software with Electron and Tauri. Every project teaches me something new — a better
+              pattern, a faster approach, a cleaner architecture. Code is a craft, and I treat it like one.
             </p>
             <p>
-              Six years on, that rule has kept the calendar honest — cafés that remember your order,
-              fintechs sending money home with dignity, festivals turning whole plazas into galleries.
-              Small businesses deserve big-league design without big-agency theater. That's the whole
-              business plan.
+              Based in Batangas, Philippines, I work with clients across timezones. Whether it's a POS
+              system for a local store or a SaaS platform for a startup, I bring the same attention to
+              detail: clean code, smooth UX, and zero drama.
             </p>
           </div>
         </div>
@@ -162,11 +161,11 @@ export default function About() {
           </h2>
           <ul className="mt-10 space-y-0">
             {[
-              ['Film photography', 'A trusty Canon AE-1 and a fridge full of expired film. My portfolio would be better if my shots were.'],
-              ['Pour-over obsession', '18g, 300ml, three pours. Working with coffee clients was inevitable and also dangerous for my budget.'],
-              ['Badminton nights', 'Every Tuesday with tricycle drivers, teachers, and me. My smash is mediocre; my trash talk is elite.'],
-              ['Cat fostering', 'Four rescue cats have passed through (three stayed). Studio meetings may include purring.'],
-              ['Thrifted books', 'Batangas ukay-ukay stalls know me. Current stack: design monographs and Filipino folklore anthologies.'],
+              ['Open Source', 'Contributing to projects and sharing my own tools on GitHub. If it\'s useful, I open-source it.'],
+              ['Side Projects', 'Always building something. POS systems, CLI tools, game prototypes — if it solves a problem, I\'m in.'],
+              ['Coffee & Code', 'Late-night coding sessions fueled by kapeng barako. Some of my best commits happen after midnight.'],
+              ['Gaming', 'When I\'m not coding, I\'m gaming. RTS, RPG, or the occasional competitive round — it keeps the problem-solving sharp.'],
+              ['Tech Blogging', 'Writing about what I learn. Process notes, architecture decisions, and lessons from shipped projects.'],
             ].map(([title, note]) => (
               <li key={title} className="card-line list-none py-5">
                 <p className="font-display text-xl font-semibold tracking-tight">{title}</p>

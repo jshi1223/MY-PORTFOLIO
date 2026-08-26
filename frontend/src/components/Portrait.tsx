@@ -20,7 +20,7 @@ export default function Portrait({
   if (failed) {
     return (
       <Artwork
-        seed="vanessa-portrait"
+        seed="john-vaness-portrait"
         label={content.profile.name}
         className={`${shape} ${className}`}
       />

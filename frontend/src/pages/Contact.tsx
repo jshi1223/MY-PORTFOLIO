@@ -81,7 +81,7 @@ export default function Contact() {
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
           Tell me about your project below, or skip the form and grab a call slot directly. I reply to
-          every serious inquiry within one business day — usually faster, unless the cats are on the keyboard.
+          every serious inquiry within one business day.
         </p>
       </section>
 

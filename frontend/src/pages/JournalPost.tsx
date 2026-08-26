@@ -64,8 +64,8 @@ export default function JournalPost() {
         <div>
           <p className="font-display text-xl font-semibold">Written by {content.profile.name}</p>
           <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-            Brand & web designer in Batangas, PH. If you enjoyed this, the newsletter goes out
-            monthly-ish and contains at least one strong opinion per issue.
+            Full-stack developer in Batangas, PH. If you enjoyed this, follow me on GitHub
+              for more project breakdowns and code.
           </p>
           <Link to="/contact" className="link-underline mt-2 inline-block font-medium text-accent">
             Start a conversation →

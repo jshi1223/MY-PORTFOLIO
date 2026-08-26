@@ -13,7 +13,7 @@ export default function Services() {
           Clear scope. Fixed price. No invoice anxiety<span className="text-accent">.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Every engagement starts with a discovery call and ends with a signed fixed-price proposal —
+          Every engagement starts with a discovery call and ends with a fixed-price proposal —
           the number you see is the number you pay. Prices in USD; Philippine clients, we can talk pesos.
         </p>
       </section>

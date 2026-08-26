@@ -1,4 +1,4 @@
-export type Category = 'Branding' | 'Web Design' | 'Print' | 'Motion'
+export type Category = 'Web Dev' | 'Mobile Dev' | 'Desktop Dev' | 'Full-Stack'
 
 export interface ProcessStep {
   title: string
@@ -118,17 +118,17 @@ export interface Content {
   projects: Project[]
 }
 
-export const CATEGORIES = ['All', 'Branding', 'Web Design', 'Print', 'Motion'] as const
+export const CATEGORIES = ['All', 'Web Dev', 'Mobile Dev', 'Desktop Dev', 'Full-Stack'] as const
 
 export const BUDGET_RANGES = ['Under $500', '$500 – $1,000', '$1,000 – $2,500', '$2,500 – $5,000', '$5,000+']
 
 export const TIMELINES = ['ASAP — yesterday ideally', 'Within a month', '1–3 months', 'Flexible / planning ahead']
 
 export const PROJECT_TYPES = [
-  'Brand Identity',
-  'Website Design',
-  'Social Media Design',
-  'Print Collateral',
-  'Packaging Design',
+  'Web App',
+  'Mobile App',
+  'Desktop App',
+  'API / Backend',
+  'Full-Stack Platform',
   'Something else / not sure yet',
 ]

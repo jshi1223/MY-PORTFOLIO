@@ -92,9 +92,9 @@ export default function Home() {
               {p.availability}
             </p>
             <h1 className="mt-6 font-display text-mega font-medium leading-[1.02] tracking-tight">
-              I design brands that{' '}
+              I build apps that{' '}
               <em className="relative whitespace-nowrap not-italic text-accent">
-                people remember
+                people use
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   viewBox="0 0 300 14"
@@ -138,23 +138,23 @@ export default function Home() {
         <div className="lg:pt-0">
           <p className="small-caps mb-3">Kamusta, I'm {p.name.split(' ')[0]}</p>
           <h2 className="font-display text-huge font-medium leading-[1.1] tracking-tight">
-            Designer.
+            Web Dev.
             <br />
-            Strategist.
+            Mobile Dev.
             <br />
-            <span className="italic text-accent">Kapanganakan ng ideas.</span>
+            <span className="italic text-accent">Desktop Dev.</span>
           </h2>
         </div>
-        <div className="space-y-6 text-lg leading-relaxed text-foreground/85 lg:pt-16">
+          <div className="space-y-6 text-lg leading-relaxed text-foreground/85 lg:pt-16">
           <p>
-            Six years ago I traded a Manila agency cubicle for a studio desk in Batangas with a view of Mount
-            Makulot. Since then I've shipped over 40 identity and web projects for cafés, fintechs, hotels,
-            and festivals — from my province to three continents.
+            I've been coding for years — started with frontend, then went full-stack because
+            I couldn't stop at just making things pretty. I build web apps with React, mobile apps
+            with React Native, and desktop software with Tauri.
           </p>
           <p>
-            My work is strategy wearing good clothes: every color earns its place, every word pulls its
-            weight. No templates, no recycled trends — just brands built to be remembered in markets full of
-            wallpaper.
+            My approach is simple: understand the problem first, pick the right tools, and write
+            code that someone else can maintain. No over-engineering, no unnecessary complexity —
+            just apps that work and people enjoy using.
           </p>
           <dl className="grid grid-cols-3 gap-6 border-t border-border pt-6">
             {[

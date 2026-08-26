@@ -18,8 +18,8 @@ export default function Journal() {
           Notes from the studio floor<span className="text-accent">.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Behind-the-scenes stories, honest process notes, and the occasional strong opinion about
-          Comic Sans (it has its place; your logo is not it).
+          Behind-the-scenes breakdowns, tech deep-dives, and honest lessons from building
+          real apps — web, mobile, and desktop.
         </p>
       </section>
 
